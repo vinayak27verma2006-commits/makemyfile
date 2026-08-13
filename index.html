@@ -1,6 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>MakeMyFile — Free Image & PDF Tools Online</title>
+
+<meta name="description" content="MakeMyFile provides free online image and PDF tools. Compress photos to 20KB, 50KB, 100KB or 200KB, resize and convert images, create PDFs, merge and split PDFs. Files are processed privately in your browser.">
+<meta name="keywords" content="MakeMyFile, image compressor, photo compressor, compress image to 20KB, compress image to 50KB, compress image to 100KB, compress image to 200KB, image resizer, image converter, JPG to PDF, PDF compressor, merge PDF, split PDF">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vinayak27verma2006-commits.github.io/makemyfile/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="MakeMyFile — Free Image & PDF Tools">
+<meta property="og:description" content="Compress, resize, convert and manage images and PDFs directly in your browser.">
+<meta property="og:url" content="https://vinayak27verma2006-commits.github.io/makemyfile/">
+<meta property="og:site_name" content="MakeMyFile">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNDQKKEFVH"></script>
@@ -11,1157 +26,1078 @@ gtag('js', new Date());
 gtag('config', 'G-XNDQKKEFVH');
 </script>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>MakeMyFile — Free Image Compressor, PDF Tools & File Converter</title>
-
-<meta name="description" content="MakeMyFile is a free online file toolkit. Compress photos to 20KB, 50KB, 100KB or 200KB, resize and convert images, create PDFs, compress PDFs, merge PDFs and split PDFs privately in your browser.">
-
-<meta name="keywords" content="MakeMyFile, image compressor, photo compressor, compress image to 20KB, compress image to 50KB, compress image to 100KB, compress image to 200KB, image resizer, image converter, JPG to PDF, PDF compressor, merge PDF, split PDF, signature resizer, online file tools">
-
-<meta name="author" content="MakeMyFile">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
-<link rel="canonical" href="https://vinayak27verma2006-commits.github.io/makemyfile/">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="MakeMyFile — Free Image & PDF Tools">
-<meta property="og:description" content="Compress, resize, convert and manage images and PDFs directly in your browser.">
-<meta property="og:url" content="https://vinayak27verma2006-commits.github.io/makemyfile/">
-<meta property="og:site_name" content="MakeMyFile">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MakeMyFile — Free Image & PDF Tools">
-<meta name="twitter:description" content="Free browser-based image and PDF tools. Compress photos, resize images, convert files and manage PDFs privately.">
-
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebApplication",
-  "name":"MakeMyFile",
-  "url":"https://vinayak27verma2006-commits.github.io/makemyfile/",
-  "description":"Free browser-based image compression, image conversion, image resizing and PDF tools.",
-  "applicationCategory":"UtilitiesApplication",
-  "operatingSystem":"Any",
-  "browserRequirements":"Requires JavaScript",
-  "offers":{
-    "@type":"Offer",
-    "price":"0",
-    "priceCurrency":"INR"
-  },
-  "featureList":[
-    "Compress image to 20KB",
-    "Compress image to 50KB",
-    "Compress image to 100KB",
-    "Compress image to 200KB",
-    "Image compressor",
-    "Image resizer",
-    "Image converter",
-    "Signature resizer",
-    "JPG to PDF",
-    "PDF compressor",
-    "Merge PDF",
-    "Split PDF"
-  ]
-}
-</script>
-
 <style>
 :root{
---bg:#080b14;
---card:#111827;
---card2:#0d1422;
---line:#33415d;
---text:#f7f9ff;
---muted:#aeb8cc;
---p:#7567ff;
---c:#23d4e5;
---ok:#35d58a
+  --bg:#080b14;
+  --card:#111827;
+  --card2:#0d1422;
+  --line:#33415d;
+  --text:#f7f9ff;
+  --muted:#aeb8cc;
+  --p:#7567ff;
+  --c:#23d4e5;
+  --ok:#35d58a;
+  --danger:#ff6878;
 }
 
 *{
-box-sizing:border-box
+  box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth
+  scroll-behavior:smooth;
 }
 
 body{
-margin:0;
-background:
-radial-gradient(circle at 50% -10%,#29356b,transparent 55%),
-var(--bg);
-color:var(--text);
-font:15px/1.5 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+  margin:0;
+  background:
+    radial-gradient(circle at 50% -10%,#29356b,transparent 55%),
+    var(--bg);
+  color:var(--text);
+  font:15px/1.5 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 
-button,input,select{
-font:inherit
+button,
+input,
+select{
+  font:inherit;
 }
 
 button{
-cursor:pointer
+  cursor:pointer;
 }
 
 header{
-position:sticky;
-top:0;
-z-index:5;
-background:#080b14dd;
-backdrop-filter:blur(16px);
-border-bottom:1px solid #ffffff12
-}
-
-.bar,.wrap{
-max-width:1100px;
-margin:auto;
-padding:14px 18px
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:#080b14dd;
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid #ffffff12;
 }
 
 .bar{
-display:flex;
-justify-content:space-between;
-align-items:center
+  max-width:1100px;
+  margin:auto;
+  padding:14px 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .logo{
-font-size:21px;
-font-weight:900
+  font-size:21px;
+  font-weight:900;
+  letter-spacing:-.03em;
 }
 
 .logo span{
-color:var(--c)
+  color:var(--c);
 }
 
 .hero{
-text-align:center;
-padding:70px 18px 35px
-}
-
-.hero h1{
-font-size:clamp(42px,8vw,72px);
-line-height:1;
-letter-spacing:-.06em;
-margin:15px auto;
-max-width:900px
-}
-
-.grad{
-background:linear-gradient(90deg,#fff,#9c91ff,#58e6ee);
-color:transparent;
-background-clip:text;
--webkit-background-clip:text
-}
-
-.hero p{
-color:var(--muted);
-font-size:18px;
-max-width:760px;
-margin:20px auto
+  text-align:center;
+  padding:70px 18px 35px;
 }
 
 .badge{
-display:inline-block;
-padding:7px 12px;
-border:1px solid #485486;
-border-radius:99px;
-color:#bfc7ff;
-background:#111a31;
-font-weight:800;
-font-size:12px
+  display:inline-block;
+  padding:7px 12px;
+  border:1px solid #485486;
+  border-radius:99px;
+  color:#bfc7ff;
+  background:#111a31;
+  font-weight:800;
+  font-size:12px;
+}
+
+.hero h1{
+  font-size:clamp(42px,8vw,72px);
+  line-height:1;
+  letter-spacing:-.06em;
+  margin:15px auto;
+  max-width:850px;
+}
+
+.grad{
+  background:linear-gradient(90deg,#fff,#9c91ff,#58e6ee);
+  color:transparent;
+  background-clip:text;
+  -webkit-background-clip:text;
+}
+
+.hero p{
+  color:var(--muted);
+  font-size:18px;
+  max-width:700px;
+  margin:0 auto;
+}
+
+.wrap{
+  max-width:1100px;
+  margin:auto;
+  padding:14px 18px;
 }
 
 .grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:12px;
-padding-bottom:35px
-}
-
-.tool,.tab,.btn{
-border:1px solid var(--line);
-background:var(--card);
-color:var(--text);
-border-radius:13px;
-padding:13px;
-font-weight:800
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  padding-bottom:35px;
 }
 
 .tool{
-text-align:left;
-min-height:86px;
-transition:.2s
+  border:1px solid var(--line);
+  background:var(--card);
+  color:var(--text);
+  border-radius:13px;
+  padding:15px;
+  font-weight:800;
+  text-align:left;
+  min-height:90px;
+  transition:.2s;
 }
 
 .tool:hover{
-transform:translateY(-3px);
-border-color:#776cff
+  transform:translateY(-3px);
+  border-color:#776cff;
+}
+
+.tool:active{
+  transform:translateY(0);
 }
 
 .tool small{
-display:block;
-color:var(--muted);
-font-weight:500;
-margin-top:4px
+  display:block;
+  color:var(--muted);
+  font-weight:500;
+  margin-top:4px;
 }
 
 .card{
-background:linear-gradient(180deg,#141d30,#0d1422);
-border:1px solid var(--line);
-border-radius:22px;
-padding:22px;
-box-shadow:0 25px 70px #0005
+  background:linear-gradient(180deg,#141d30,#0d1422);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 25px 70px #0005;
+}
+
+.pane h2{
+  margin:0 0 4px;
+}
+
+.pane>p{
+  color:var(--muted);
 }
 
 .controls{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:13px
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:13px;
 }
 
 .field label{
-display:block;
-color:#cbd3e4;
-font-size:12px;
-font-weight:800;
-margin-bottom:6px
+  display:block;
+  color:#cbd3e4;
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:6px;
 }
 
 .field input,
 .field select{
-width:100%;
-padding:12px;
-border-radius:11px;
-border:1px solid #465572;
-background:#080d18;
-color:#fff;
-outline:0
+  width:100%;
+  padding:12px;
+  border-radius:11px;
+  border:1px solid #465572;
+  background:#080d18;
+  color:#fff;
+  outline:0;
 }
 
 .field input:focus,
 .field select:focus{
-border-color:#8d82ff;
-box-shadow:0 0 0 3px #7567ff22
+  border-color:#8d82ff;
+  box-shadow:0 0 0 3px #7567ff22;
 }
 
 option{
-background:#101827;
-color:#fff
+  background:#101827;
+  color:#fff;
 }
 
 .drop{
-margin-top:16px;
-border:2px dashed #465572;
-border-radius:17px;
-text-align:center;
-padding:32px 15px;
-background:#0d1525;
-transition:.2s
+  margin-top:16px;
+  border:2px dashed #465572;
+  border-radius:17px;
+  text-align:center;
+  padding:32px 15px;
+  background:#0d1525;
+  transition:.2s;
+  user-select:none;
 }
 
 .drop:hover,
 .drop.drag{
-border-color:var(--c);
-background:#0e2230
-}
-
-.drop input{
-display:none
+  border-color:var(--c);
+  background:#0e2230;
 }
 
 .drop h3{
-margin:7px 0
+  margin:7px 0;
 }
 
 .drop p{
-margin:0;
-color:var(--muted)
+  margin:0;
+  color:var(--muted);
+}
+
+.drop input{
+  display:none;
 }
 
 .actions{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-margin-top:16px
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:16px;
 }
 
-.primary{
-border:0;
-background:linear-gradient(100deg,#6656ed,#16b8c9);
-box-shadow:0 10px 28px #6556ed33
+.btn{
+  border:1px solid var(--line);
+  background:var(--card);
+  color:var(--text);
+  border-radius:13px;
+  padding:13px 17px;
+  font-weight:800;
+}
+
+.btn.primary{
+  border:0;
+  background:linear-gradient(100deg,#6656ed,#16b8c9);
+  box-shadow:0 10px 28px #6556ed33;
+}
+
+.btn:disabled{
+  opacity:.6;
+  cursor:not-allowed;
 }
 
 .status{
-margin-top:16px;
-padding:13px;
-border-radius:11px;
-background:#0a111e;
-border:1px solid var(--line);
-color:#d5dcec
+  margin-top:16px;
+  padding:13px;
+  border-radius:11px;
+  background:#0a111e;
+  border:1px solid var(--line);
+  color:#d5dcec;
 }
 
 .good{
-border-color:#286d50;
-color:#8df0ba
+  border-color:#286d50;
+  color:#8df0ba;
 }
 
 .warn{
-border-color:#73572b;
-color:#ffd68e
+  border-color:#73572b;
+  color:#ffd68e;
 }
 
 .err{
-border-color:#71323d;
-color:#ffadb7
+  border-color:#71323d;
+  color:#ffadb7;
 }
 
 .hidden{
-display:none
+  display:none !important;
 }
 
-.seo-content{
-max-width:1100px;
-margin:50px auto 0;
-padding:0 18px
-}
-
-.seo-content h2{
-font-size:30px;
-margin:0 0 12px
-}
-
-.seo-content h3{
-font-size:21px;
-margin-top:30px
-}
-
-.seo-content p{
-color:var(--muted);
-max-width:850px
-}
-
-.seo-list{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-margin-top:20px
-}
-
-.seo-box{
-padding:18px;
-border:1px solid var(--line);
-border-radius:15px;
-background:#0d1422
-}
-
-.seo-box strong{
-display:block;
-margin-bottom:5px
-}
-
-.privacy{
-margin-top:35px;
-padding:18px;
-border:1px solid #286d50;
-border-radius:15px;
-background:#0b1915;
-color:#9af0bf
+.privacy-note{
+  margin-top:20px;
+  padding:14px;
+  border:1px solid #243451;
+  border-radius:12px;
+  background:#0a111d;
+  color:var(--muted);
+  font-size:13px;
 }
 
 .foot{
-margin-top:70px;
-border-top:1px solid var(--line);
-color:var(--muted);
-padding:30px 18px;
-text-align:center
+  margin-top:70px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  padding:30px 18px;
+  text-align:center;
 }
 
-.pane h2{
-margin-bottom:4px
+.foot a{
+  color:#aeb8ff;
+  text-decoration:none;
 }
 
-.pane>p{
-color:var(--muted)
+.foot a:hover{
+  text-decoration:underline;
 }
 
 @media(max-width:760px){
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-.grid{
-grid-template-columns:repeat(2,1fr)
+  .controls{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding-top:50px;
+  }
+
+  .card{
+    padding:16px;
+  }
+
+  .tool{
+    font-size:13px;
+  }
 }
 
-.controls{
-grid-template-columns:1fr
-}
+@media(max-width:430px){
+  .grid{
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+  }
 
-.hero{
-padding-top:50px
-}
-
-.card{
-padding:16px
-}
-
-.tool{
-font-size:13px
-}
-
-.seo-list{
-grid-template-columns:1fr
-}
-
+  .tool{
+    min-height:82px;
+    padding:11px;
+  }
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
-<div class="bar">
-<div class="logo">MakeMy<span>File</span></div>
-</div>
+  <div class="bar">
+    <div class="logo">MakeMy<span>File</span></div>
+  </div>
 </header>
 
-<main>
-
 <section class="hero">
+  <span class="badge">PRIVATE • FAST • IN-BROWSER</span>
 
-<span class="badge">PRIVATE • FAST • IN-BROWSER</span>
+  <h1>
+    Make your files
+    <span class="grad">fit. Instantly.</span>
+  </h1>
 
-<h1>
-Free online tools to make your files
-<span class="grad">fit instantly.</span>
-</h1>
-
-<p>
-MakeMyFile is a free online image compressor, image resizer,
-image converter and PDF toolkit. Compress photos to exact KB sizes,
-resize images, convert formats and manage PDFs without uploading your files.
-</p>
-
+  <p>
+    Compress, resize, convert and manage images and PDFs without uploading your files.
+  </p>
 </section>
 
 <div class="wrap">
 
-<section aria-label="MakeMyFile tools">
+  <div class="grid">
 
-<div class="grid">
+    <button class="tool" data-tool="image" data-kb="20">
+      ⚡ Photo to 20 KB
+      <small>Compress to target size</small>
+    </button>
 
-<button class="tool" onclick="openTool('image',20)">
-⚡ Compress Photo to 20 KB
-<small>Application-ready image compression</small>
-</button>
+    <button class="tool" data-tool="image" data-kb="50">
+      ⚡ Photo to 50 KB
+      <small>Compress to target size</small>
+    </button>
 
-<button class="tool" onclick="openTool('image',50)">
-⚡ Compress Photo to 50 KB
-<small>Reduce image to approximately 50 KB</small>
-</button>
+    <button class="tool" data-tool="image" data-kb="100">
+      ⚡ Photo to 100 KB
+      <small>Compress to target size</small>
+    </button>
 
-<button class="tool" onclick="openTool('image',100)">
-⚡ Compress Photo to 100 KB
-<small>Reduce image to approximately 100 KB</small>
-</button>
+    <button class="tool" data-tool="image" data-kb="200">
+      ⚡ Photo to 200 KB
+      <small>Compress to target size</small>
+    </button>
 
-<button class="tool" onclick="openTool('image',200)">
-⚡ Compress Photo to 200 KB
-<small>Reduce image to approximately 200 KB</small>
-</button>
+    <button class="tool" data-tool="image">
+      🖼️ Image Compressor
+      <small>Choose your target KB</small>
+    </button>
 
-<button class="tool" onclick="openTool('image')">
-🖼️ Image Compressor
-<small>Compress JPG, PNG and WebP images</small>
-</button>
+    <button class="tool" data-tool="resize">
+      📐 Image Resizer
+      <small>Exact dimensions</small>
+    </button>
 
-<button class="tool" onclick="openTool('resize')">
-📐 Image Resizer
-<small>Resize images to exact dimensions</small>
-</button>
+    <button class="tool" data-tool="convert">
+      🔄 Image Converter
+      <small>JPG / PNG / WebP</small>
+    </button>
 
-<button class="tool" onclick="openTool('convert')">
-🔄 Image Converter
-<small>Convert JPG, PNG and WebP</small>
-</button>
+    <button class="tool" data-tool="signature">
+      ✍️ Signature Resizer
+      <small>Clean exact-size export</small>
+    </button>
 
-<button class="tool" onclick="openTool('signature')">
-✍️ Signature Resizer
-<small>Create a clean signature image</small>
-</button>
+    <button class="tool" data-tool="jpgpdf">
+      📄 JPG to PDF
+      <small>Combine multiple images</small>
+    </button>
 
-<button class="tool" onclick="openTool('jpgpdf')">
-📄 JPG to PDF
-<small>Convert multiple images into one PDF</small>
-</button>
+    <button class="tool" data-tool="pdf">
+      🗜️ PDF Compressor
+      <small>Compress photo-heavy PDFs</small>
+    </button>
 
-<button class="tool" onclick="openTool('pdf')">
-🗜️ PDF Compressor
-<small>Compress photo-heavy and scanned PDFs</small>
-</button>
+    <button class="tool" data-tool="merge">
+      ➕ Merge PDFs
+      <small>Combine PDF files</small>
+    </button>
 
-<button class="tool" onclick="openTool('merge')">
-➕ Merge PDFs
-<small>Combine multiple PDF files</small>
-</button>
+    <button class="tool" data-tool="split">
+      ✂️ Split PDF
+      <small>Extract selected pages</small>
+    </button>
 
-<button class="tool" onclick="openTool('split')">
-✂️ Split PDF
-<small>Extract selected PDF pages</small>
-</button>
+  </div>
+
+  <div class="card">
+
+    <!-- IMAGE COMPRESSOR -->
+
+    <section id="image" class="pane">
+
+      <h2>Image Compressor</h2>
+
+      <p>
+        Compress your image to a target file size while keeping the best practical quality.
+      </p>
+
+      <div class="controls">
+
+        <div class="field">
+          <label for="kb">Target KB</label>
+          <input id="kb" type="number" min="1" value="50">
+        </div>
+
+        <div class="field">
+          <label for="fmt">Format</label>
+
+          <select id="fmt">
+            <option value="image/jpeg">JPEG</option>
+            <option value="image/webp">WebP</option>
+            <option value="image/png">PNG</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="drop" data-input="ifile">
+
+        ⬆️
+
+        <h3>Choose an image</h3>
+
+        <p>JPG, PNG or WebP</p>
+
+        <input id="ifile" type="file" accept="image/jpeg,image/png,image/webp">
+
+      </div>
+
+      <div class="actions">
+
+        <button id="compressBtn" class="btn primary">
+          Compress & Download
+        </button>
+
+      </div>
+
+      <div id="istat"></div>
+
+    </section>
+
+
+    <!-- RESIZER -->
+
+    <section id="resize" class="pane hidden">
+
+      <h2>Image Resizer</h2>
+
+      <p>Resize an image to exact dimensions.</p>
+
+      <div class="controls">
+
+        <div class="field">
+          <label for="rw">Width</label>
+          <input id="rw" type="number" min="1" value="800">
+        </div>
+
+        <div class="field">
+          <label for="rh">Height</label>
+          <input id="rh" type="number" min="1" value="600">
+        </div>
+
+        <div class="field">
+          <label for="rf">Format</label>
+
+          <select id="rf">
+            <option value="image/jpeg">JPEG</option>
+            <option value="image/png">PNG</option>
+            <option value="image/webp">WebP</option>
+          </select>
+
+        </div>
+
+        <div class="field">
+          <label for="rq">Quality</label>
+          <input id="rq" type="number" min=".05" max=".98" step=".01" value=".85">
+        </div>
+
+      </div>
+
+      <div class="drop" data-input="rfile">
+
+        📐
+
+        <h3>Choose an image</h3>
+
+        <input id="rfile" type="file" accept="image/jpeg,image/png,image/webp">
+
+      </div>
+
+      <div class="actions">
+        <button id="resizeBtn" class="btn primary">
+          Resize & Download
+        </button>
+      </div>
+
+      <div id="rstat"></div>
+
+    </section>
+
+
+    <!-- CONVERTER -->
+
+    <section id="convert" class="pane hidden">
+
+      <h2>Image Converter</h2>
+
+      <p>Convert images between JPG, PNG and WebP.</p>
+
+      <div class="field">
+
+        <label for="cf">Output format</label>
+
+        <select id="cf">
+          <option value="image/jpeg">JPG</option>
+          <option value="image/png">PNG</option>
+          <option value="image/webp">WebP</option>
+        </select>
+
+      </div>
+
+      <div class="drop" data-input="cfile">
+
+        🔄
+
+        <h3>Choose an image</h3>
+
+        <input id="cfile" type="file" accept="image/jpeg,image/png,image/webp">
+
+      </div>
+
+      <div class="actions">
+        <button id="convertBtn" class="btn primary">
+          Convert & Download
+        </button>
+      </div>
+
+      <div id="cstat"></div>
+
+    </section>
+
+
+    <!-- SIGNATURE -->
+
+    <section id="signature" class="pane hidden">
+
+      <h2>Signature Resizer</h2>
+
+      <p>Resize and export your signature as a PNG.</p>
+
+      <div class="controls">
+
+        <div class="field">
+          <label for="sw">Width</label>
+          <input id="sw" type="number" min="1" value="300">
+        </div>
+
+        <div class="field">
+          <label for="sh">Height</label>
+          <input id="sh" type="number" min="1" value="100">
+        </div>
+
+      </div>
+
+      <div class="drop" data-input="sfile">
+
+        ✍️
+
+        <h3>Choose signature</h3>
+
+        <input id="sfile" type="file" accept="image/jpeg,image/png,image/webp">
+
+      </div>
+
+      <div class="actions">
+        <button id="signatureBtn" class="btn primary">
+          Create & Download
+        </button>
+      </div>
+
+      <div id="sstat"></div>
+
+    </section>
+
+
+    <!-- JPG TO PDF -->
+
+    <section id="jpgpdf" class="pane hidden">
+
+      <h2>JPG to PDF</h2>
+
+      <p>Combine multiple images into a single PDF.</p>
+
+      <div class="drop" data-input="jfile">
+
+        📄
+
+        <h3>Choose images</h3>
+
+        <p>Select one or multiple JPG/PNG files</p>
+
+        <input
+          id="jfile"
+          type="file"
+          accept="image/jpeg,image/png"
+          multiple
+        >
+
+      </div>
+
+      <div class="actions">
+        <button id="jpgpdfBtn" class="btn primary">
+          Create PDF
+        </button>
+      </div>
+
+      <div id="jstat"></div>
+
+    </section>
+
+
+    <!-- PDF COMPRESSOR -->
+
+    <section id="pdf" class="pane hidden">
+
+      <h2>PDF Compressor</h2>
+
+      <p>
+        Rebuilds pages as optimized JPEGs. Best for scans and photo-heavy PDFs.
+      </p>
+
+      <div class="controls">
+
+        <div class="field">
+
+          <label for="plevel">Compression mode</label>
+
+          <select id="plevel">
+            <option value="balanced">Balanced</option>
+            <option value="strong">Strong</option>
+            <option value="max">Maximum</option>
+          </select>
+
+        </div>
+
+        <div class="field">
+
+          <label for="pq">JPEG quality</label>
+
+          <select id="pq">
+            <option value=".78">78%</option>
+            <option value=".65">65%</option>
+            <option value=".52">52%</option>
+          </select>
+
+        </div>
+
+      </div>
+
+      <div class="drop" data-input="pfile">
+
+        🗜️
+
+        <h3>Choose a PDF</h3>
+
+        <input id="pfile" type="file" accept="application/pdf">
+
+      </div>
+
+      <div class="actions">
+        <button id="pdfcompressBtn" class="btn primary">
+          Compress PDF
+        </button>
+      </div>
+
+      <div id="pstat"></div>
+
+    </section>
+
+
+    <!-- MERGE -->
+
+    <section id="merge" class="pane hidden">
+
+      <h2>Merge PDFs</h2>
+
+      <p>Combine multiple PDF files in their selected order.</p>
+
+      <div class="drop" data-input="mfile">
+
+        ➕
+
+        <h3>Choose PDFs</h3>
+
+        <p>Select at least two PDF files</p>
+
+        <input id="mfile" type="file" accept="application/pdf" multiple>
+
+      </div>
+
+      <div class="actions">
+        <button id="mergeBtn" class="btn primary">
+          Merge PDFs
+        </button>
+      </div>
+
+      <div id="mstat"></div>
+
+    </section>
+
+
+    <!-- SPLIT -->
+
+    <section id="split" class="pane hidden">
+
+      <h2>Split PDF</h2>
+
+      <p>
+        Extract pages such as 1-3, 5, 8-10.
+      </p>
+
+      <div class="field">
+
+        <label for="ranges">Page ranges</label>
+
+        <input
+          id="ranges"
+          type="text"
+          placeholder="1-3, 5, 8-10"
+        >
+
+      </div>
+
+      <div class="drop" data-input="xfile">
+
+        ✂️
+
+        <h3>Choose a PDF</h3>
+
+        <input id="xfile" type="file" accept="application/pdf">
+
+      </div>
+
+      <div class="actions">
+        <button id="splitBtn" class="btn primary">
+          Split PDF
+        </button>
+      </div>
+
+      <div id="xstat"></div>
+
+    </section>
+
+
+    <div class="privacy-note">
+      🔒 <strong>Privacy:</strong>
+      Your files are processed directly in your browser.
+      MakeMyFile does not upload your files to a server.
+    </div>
+
+  </div>
 
 </div>
-
-</section>
-
-<section class="card" aria-label="File processing tools">
-
-<div id="image" class="pane">
-
-<h2>Image Compressor — Compress Photo to Exact KB</h2>
-
-<p>
-Compress JPG, PNG or WebP images to a target size such as 20 KB,
-50 KB, 100 KB or 200 KB. MakeMyFile processes the image locally in your browser.
-</p>
-
-<div class="controls">
-
-<div class="field">
-<label for="kb">Target size in KB</label>
-<input id="kb" type="number" min="1" value="50">
-</div>
-
-<div class="field">
-<label for="fmt">Output format</label>
-<select id="fmt">
-<option value="image/jpeg">JPEG</option>
-<option value="image/webp">WebP</option>
-<option value="image/png">PNG</option>
-</select>
-</div>
-
-</div>
-
-<div class="drop" id="idrop">
-⬆️
-<h3>Choose an image</h3>
-<p>JPG, PNG or WebP</p>
-<input id="ifile" type="file" accept="image/*">
-</div>
-
-<div class="actions">
-<button class="btn primary" onclick="imgCompress()">
-Compress & Download
-</button>
-</div>
-
-<div id="istat"></div>
-
-</div>
-
-
-<div id="resize" class="pane hidden">
-
-<h2>Image Resizer</h2>
-
-<p>
-Resize an image to exact width and height while choosing your preferred format and quality.
-</p>
-
-<div class="controls">
-
-<div class="field">
-<label for="rw">Width in pixels</label>
-<input id="rw" type="number" min="1" value="800">
-</div>
-
-<div class="field">
-<label for="rh">Height in pixels</label>
-<input id="rh" type="number" min="1" value="600">
-</div>
-
-<div class="field">
-<label for="rf">Format</label>
-<select id="rf">
-<option value="image/jpeg">JPEG</option>
-<option value="image/png">PNG</option>
-<option value="image/webp">WebP</option>
-</select>
-</div>
-
-<div class="field">
-<label for="rq">Quality</label>
-<input id="rq" type="number" min=".05" max=".98" step=".01" value=".85">
-</div>
-
-</div>
-
-<div class="drop" id="rdrop">
-📐
-<h3>Choose an image</h3>
-<p>JPG, PNG or WebP</p>
-<input id="rfile" type="file" accept="image/*">
-</div>
-
-<div class="actions">
-<button class="btn primary" onclick="resize()">
-Resize & Download
-</button>
-</div>
-
-<div id="rstat"></div>
-
-</div>
-
-
-<div id="convert" class="pane hidden">
-
-<h2>Image Converter — JPG, PNG & WebP</h2>
-
-<p>
-Convert images between JPG, PNG and WebP formats directly in your browser.
-</p>
-
-<div class="field">
-
-<label for="cf">Output format</label>
-
-<select id="cf">
-<option value="image/jpeg">JPG</option>
-<option value="image/png">PNG</option>
-<option value="image/webp">WebP</option>
-</select>
-
-</div>
-
-<div class="drop" id="cdrop">
-🔄
-<h3>Choose an image</h3>
-<p>JPG, PNG or WebP</p>
-<input id="cfile" type="file" accept="image/*">
-</div>
-
-<div class="actions">
-<button class="btn primary" onclick="convert()">
-Convert & Download
-</button>
-</div>
-
-<div id="cstat"></div>
-
-</div>
-
-
-<div id="signature" class="pane hidden">
-
-<h2>Signature Resizer</h2>
-
-<p>
-Resize your digital signature to exact dimensions and export it as a PNG.
-</p>
-
-<div class="controls">
-
-<div class="field">
-<label for="sw">Width</label>
-<input id="sw" type="number" min="1" value="300">
-</div>
-
-<div class="field">
-<label for="sh">Height</label>
-<input id="sh" type="number" min="1" value="100">
-</div>
-
-</div>
-
-<div class="drop" id="sdrop">
-✍️
-<h3>Choose signature</h3>
-<p>PNG, JPG or other image format</p>
-<input id="sfile" type="file" accept="image/*">
-</div>
-
-<div class="actions">
-<button class="btn primary" onclick="signature()">
-Create & Download
-</button>
-</div>
-
-<div id="sstat"></div>
-
-</div>
-
-
-<div id="jpgpdf" class="pane hidden">
-
-<h2>JPG to PDF Converter</h2>
-
-<p>
-Convert one or multiple JPG or PNG images into a single PDF document.
-</p>
-
-<div class="drop" id="jdrop">
-📄
-<h3>Choose images</h3>
-<p>Select multiple JPG or PNG images</p>
-<input id="jfile" type="file" accept="image/jpeg,image/png" multiple>
-</div>
-
-<div class="actions">
-<button class="btn primary" onclick="jpgpdf()">
-Create PDF
-</button>
-</div>
-
-<div id="jstat"></div>
-
-</div>
-
-
-<div id="pdf" class="pane hidden">
-
-<h2>PDF Compressor</h2>
-
-<p>
-Compress PDF files by rebuilding pages as optimized JPEG images.
-Best suited for scanned documents and photo-heavy PDFs.
-</p>
-
-<div class="controls">
-
-<div class="field">
-
-<label for="plevel">Compression mode</label>
-
-<select id="plevel">
-<option value="balanced">Balanced</option>
-<option value="strong">Strong</option>
-<option value="max">Maximum</option>
-</select>
-
-</div>
-
-<div class="field">
-
-<label for="pq">JPEG quality</label>
-
-<select id="pq">
-<option value=".78">78%</option>
-<option value=".65">65%</option>
-<option value=".52">52%</option>
-</select>
-
-</div>
-
-</div>
-
-<div class="drop" id="pdrop">
-🗜️
-<h3>Choose a PDF</h3>
-<p>PDF files only</p>
-<input id="pfile" type="file" accept="application/pdf">
-</div>
-
-<div class="actions">
-<button class="btn primary" onclick="pdfcompress()">
-Compress PDF
-</button>
-</div>
-
-<div id="pstat"></div>
-
-</div>
-
-
-<div id="merge" class="pane hidden">
-
-<h2>Merge PDF Files</h2>
-
-<p>
-Combine multiple PDF documents into one PDF in the order you select them.
-</p>
-
-<div class="drop" id="mdrop">
-➕
-<h3>Choose PDFs</h3>
-<p>Select two or more PDF files</p>
-<input id="mfile" type="file" accept="application/pdf" multiple>
-</div>
-
-<div class="actions">
-<button class="btn primary" onclick="merge()">
-Merge PDFs
-</button>
-</div>
-
-<div id="mstat"></div>
-
-</div>
-
-
-<div id="split" class="pane hidden">
-
-<h2>Split PDF — Extract Pages</h2>
-
-<p>
-Extract selected pages from a PDF using ranges such as 1-3, 5 or 8-10.
-</p>
-
-<div class="field">
-
-<label for="ranges">Page ranges</label>
-
-<input id="ranges" placeholder="1-3, 5">
-
-</div>
-
-<div class="drop" id="xdrop">
-✂️
-<h3>Choose a PDF</h3>
-<p>PDF files only</p>
-<input id="xfile" type="file" accept="application/pdf">
-</div>
-
-<div class="actions">
-<button class="btn primary" onclick="split()">
-Split PDF
-</button>
-</div>
-
-<div id="xstat"></div>
-
-</div>
-
-</section>
-
-</div>
-
-
-<section class="seo-content">
-
-<h2>Free Online File Tools</h2>
-
-<p>
-MakeMyFile provides simple, free browser-based tools for common image and
-PDF tasks. You can compress photos to a specific file size, resize images,
-convert image formats, create PDFs and manage PDF documents without sending
-your files to a server.
-</p>
-
-<div class="seo-list">
-
-<div class="seo-box">
-<strong>Compress images to 20 KB</strong>
-Reduce a photo for applications, forms and websites where a small file size is required.
-</div>
-
-<div class="seo-box">
-<strong>Compress images to 50 KB</strong>
-Create a smaller image suitable for online applications and upload limits.
-</div>
-
-<div class="seo-box">
-<strong>Compress images to 100 KB</strong>
-Optimize photos while keeping practical image dimensions.
-</div>
-
-<div class="seo-box">
-<strong>Compress images to 200 KB</strong>
-Reduce image file size for websites, applications and document uploads.
-</div>
-
-<div class="seo-box">
-<strong>Resize images</strong>
-Set exact width and height in pixels and export your image in JPG, PNG or WebP.
-</div>
-
-<div class="seo-box">
-<strong>Convert images</strong>
-Convert between JPG, PNG and WebP formats without installing software.
-</div>
-
-<div class="seo-box">
-<strong>JPG to PDF</strong>
-Combine multiple images into a single PDF document.
-</div>
-
-<div class="seo-box">
-<strong>PDF tools</strong>
-Compress, merge and split PDF documents directly in your browser.
-</div>
-
-</div>
-
-<div class="privacy">
-<strong>🔒 Privacy-first processing</strong><br>
-Your selected files are processed locally in your browser. MakeMyFile does not
-need to upload your images or PDFs to a server for these tools to work.
-</div>
-
-<h3>Why use MakeMyFile?</h3>
-
-<p>
-MakeMyFile is designed for students, applicants, professionals and anyone who
-needs to quickly prepare files for online forms and applications. Instead of
-installing desktop software, you can open the website and use the required
-file tool directly from your browser.
-</p>
-
-</section>
-
-</main>
-
 
 <footer class="foot">
-MakeMyFile © 2026 · Free browser-based image and PDF tools ·
-Files are processed locally in your browser.
+
+  <div>
+    MakeMyFile © 2026 · Files are processed locally in your browser.
+  </div>
+
+  <div style="margin-top:8px">
+    Free image and PDF tools.
+  </div>
+
 </footer>
 
 
+<!-- Stable PDF libraries -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
 <script>
+"use strict";
 
-let PDFJS=null;
+/* =========================================================
+   BASIC HELPERS
+========================================================= */
 
-import('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs')
-.then(x=>{
-PDFJS=x;
-x.GlobalWorkerOptions.workerSrc=
-'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs';
-})
-.catch(()=>{});
+const $ = id => document.getElementById(id);
+
+function formatSize(bytes){
+
+  if(bytes < 1024){
+    return bytes + " B";
+  }
+
+  if(bytes < 1024 * 1024){
+    return (bytes / 1024).toFixed(1) + " KB";
+  }
+
+  return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+}
 
 
-const $=x=>document.getElementById(x);
+function showStatus(id, message, type = ""){
 
-const fmt=n=>
-n<1024?n+' B':
-n<1048576?(n/1024).toFixed(1)+' KB':
-(n/1048576).toFixed(2)+' MB';
+  const el = $(id);
+
+  if(!el) return;
+
+  el.innerHTML =
+    '<div class="status ' + type + '">' +
+    message +
+    '</div>';
+}
 
 
-function openTool(id,k){
+function downloadBlob(blob, filename){
 
-document.querySelectorAll('.pane')
-.forEach(x=>x.classList.add('hidden'));
+  const url = URL.createObjectURL(blob);
 
-$(id).classList.remove('hidden');
+  const a = document.createElement("a");
 
-if(k)
-$('kb').value=k;
+  a.href = url;
+  a.download = filename;
 
-window.scrollTo({
-top:document.querySelector('.card').offsetTop-20,
-behavior:'smooth'
-});
+  document.body.appendChild(a);
+
+  a.click();
+
+  a.remove();
+
+  setTimeout(function(){
+    URL.revokeObjectURL(url);
+  }, 1500);
+}
+
+
+/* =========================================================
+   TOOL NAVIGATION
+========================================================= */
+
+function openTool(id, kb){
+
+  document.querySelectorAll(".pane").forEach(function(pane){
+    pane.classList.add("hidden");
+  });
+
+  const pane = $(id);
+
+  if(!pane) return;
+
+  pane.classList.remove("hidden");
+
+  if(kb){
+    $("kb").value = kb;
+  }
+
+  const card = document.querySelector(".card");
+
+  if(card){
+
+    window.scrollTo({
+      top: card.offsetTop - 20,
+      behavior: "smooth"
+    });
+
+  }
+}
+
+
+/* =========================================================
+   IMAGE LOADING
+========================================================= */
+
+function loadImage(file){
+
+  return new Promise(function(resolve, reject){
+
+    if(!file){
+      reject(new Error("No image selected."));
+      return;
+    }
+
+    const url = URL.createObjectURL(file);
+
+    const image = new Image();
+
+    image.onload = function(){
+
+      URL.revokeObjectURL(url);
+
+      resolve(image);
+
+    };
+
+    image.onerror = function(){
+
+      URL.revokeObjectURL(url);
+
+      reject(new Error("Image could not be decoded."));
+
+    };
+
+    image.src = url;
+
+  });
 
 }
 
 
-function stat(id,msg,c=''){
+/* =========================================================
+   CANVAS ENCODING
+========================================================= */
 
-$(id).innerHTML=
-'<div class="status '+c+'">'+msg+'</div>';
+function encodeImage(image, width, height, type, quality){
 
-}
+  return new Promise(function(resolve, reject){
 
+    const canvas = document.createElement("canvas");
 
-function dl(b,n){
+    canvas.width = Math.max(1, Math.round(width));
+    canvas.height = Math.max(1, Math.round(height));
 
-let u=URL.createObjectURL(b);
+    const ctx = canvas.getContext("2d");
 
-let a=document.createElement('a');
+    if(!ctx){
+      reject(new Error("Your browser does not support Canvas."));
+      return;
+    }
 
-a.href=u;
-a.download=n;
+    /*
+      JPEG does not support transparency,
+      so use white background.
+    */
 
-document.body.appendChild(a);
-a.click();
-a.remove();
+    if(type === "image/jpeg"){
 
-setTimeout(()=>{
-URL.revokeObjectURL(u);
-},1000);
+      ctx.fillStyle = "#ffffff";
 
-}
+      ctx.fillRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+      );
 
+    }
 
-function img(f){
+    ctx.drawImage(
+      image,
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
 
-return new Promise((ok,no)=>{
+    canvas.toBlob(
+      function(blob){
 
-let u=URL.createObjectURL(f);
-let i=new Image();
+        canvas.width = 1;
+        canvas.height = 1;
 
-i.onload=()=>{
-URL.revokeObjectURL(u);
-ok(i);
-};
+        if(!blob){
 
-i.onerror=()=>{
-URL.revokeObjectURL(u);
-no(Error('Image could not be decoded'));
-};
+          reject(
+            new Error("Image encoding failed.")
+          );
 
-i.src=u;
+          return;
+        }
 
-});
+        resolve(blob);
 
-}
+      },
+      type,
+      quality
+    );
 
-
-function blob(i,w,h,t,q=.85){
-
-let c=document.createElement('canvas');
-
-c.width=w;
-c.height=h;
-
-let x=c.getContext('2d');
-
-if(t==='image/jpeg'){
-
-x.fillStyle='#fff';
-x.fillRect(0,0,w,h);
-
-}
-
-x.drawImage(i,0,0,w,h);
-
-return new Promise((ok,no)=>{
-
-c.toBlob(
-b=>b?
-ok(b):
-no(Error('Encoding failed')),
-t,
-q
-);
-
-});
+  });
 
 }
 
 
-async function imgCompress(){
+/* =========================================================
+   IMAGE COMPRESSOR
+========================================================= */
 
-let f=$('ifile').files[0];
+async function compressImage(){
 
-let target=+$('kb').value*1024;
+  const file = $("ifile").files[0];
 
-if(!f||!target)
-return stat(
-'istat',
-'Choose an image and target size.',
-'err'
-);
+  const targetKB = Number($("kb").value);
 
-stat('istat','Optimizing image…');
+  const targetBytes = targetKB * 1024;
 
-try{
+  if(!file){
 
-let i=await img(f);
+    showStatus(
+      "istat",
+      "Please choose an image first.",
+      "err"
+    );
 
-let t=$('fmt').value;
+    return;
+  }
 
-let best=null;
-let small=null;
+  if(!targetKB || targetKB < 1){
 
-for(let s=1;s>=.15;s-=.05){
+    showStatus(
+      "istat",
+      "Enter a valid target size.",
+      "err"
+    );
 
-let lo=.05;
-let hi=.98;
+    return;
+  }
 
-for(let z=0;z<8;z++){
+  const button = $("compressBtn");
 
-let q=(lo+hi)/2;
+  button.disabled = true;
 
-let b=await blob(
-i,
-Math.max(1,Math.round(i.naturalWidth*s)),
-Math.max(1,Math.round(i.naturalHeight*s)),
-t,
-q
-);
+  button.textContent = "Compressing…";
 
-if(!small||b.size<small.b.size)
-small={b,s,q};
-
-if(b.size<=target){
-
-if(
-!best||
-s>best.s||
-(s===best.s&&q>best.q)
-)
-best={b,s,q};
-
-lo=q;
-
-}else{
-
-hi=q;
-
-}
-
-}
-
-if(
-best&&
-best.s>=.95&&
-best.b.size>=target*.9
-)
-break;
-
-}
-
-let r=best||small;
-
-stat(
-'istat',
-
-best?
-`Done: ${fmt(r.b.size)} at ${Math.round(r.s*100)}% dimensions.`:
-`Target is extremely small; nearest result is ${fmt(r.b.size)}.`,
-
-best?'good':'warn'
-);
-
-dl(
-r.b,
-'makemyfile.'+
-(t==='image/jpeg'?'jpg':t.split('/')[1])
-);
-
-}catch(e){
-
-stat(
-'istat',
-e.message,
-'err'
-);
-
-}
-
-}
-
-
-async function resize(){
-
-let f=$('rfile').files[0];
-
-if(!f)
-return stat(
-'rstat',
-'Choose an image.',
-'err'
-);
-
-t
+  sho
