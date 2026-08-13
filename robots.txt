@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vinayak27verma2006-commits.github.io/makemyfile/sitemap.xml
