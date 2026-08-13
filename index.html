@@ -25,7 +25,7 @@ gtag('config', 'G-XNDQKKEFVH');
 
 <!-- PDF LIBRARIES -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs" type="module"></script>
 
 <style>
 :root{
@@ -40,9 +40,13 @@ gtag('config', 'G-XNDQKKEFVH');
 --green:#35d58a;
 }
 
-*{box-sizing:border-box}
+*{
+box-sizing:border-box;
+}
 
-html{scroll-behavior:smooth}
+html{
+scroll-behavior:smooth;
+}
 
 body{
 margin:0;
@@ -53,8 +57,13 @@ color:var(--text);
 font:15px/1.5 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 
-button,input,select{font:inherit}
-button{cursor:pointer}
+button,input,select{
+font:inherit;
+}
+
+button{
+cursor:pointer;
+}
 
 header{
 position:sticky;
@@ -79,7 +88,9 @@ font-size:21px;
 font-weight:900;
 }
 
-.logo span{color:var(--cyan)}
+.logo span{
+color:var(--cyan);
+}
 
 .hero{
 text-align:center;
@@ -221,6 +232,7 @@ padding:32px 15px;
 background:#0d1525;
 transition:.2s;
 user-select:none;
+cursor:pointer;
 }
 
 .drop:hover,
@@ -242,6 +254,13 @@ color:var(--muted);
 display:none;
 }
 
+.file-name{
+margin-top:10px;
+color:#8df0ba;
+font-weight:700;
+word-break:break-word;
+}
+
 .actions{
 display:flex;
 gap:10px;
@@ -254,7 +273,7 @@ border:1px solid var(--line);
 background:var(--card);
 color:var(--text);
 border-radius:13px;
-padding:13px;
+padding:13px 16px;
 font-weight:800;
 }
 
@@ -457,11 +476,9 @@ Compress, resize, convert and manage images and PDFs without uploading your file
 
 </div>
 
-
 <div class="card">
 
-
-<!-- IMAGE COMPRESSOR -->
+<!-- IMAGE -->
 
 <div id="image" class="pane">
 
@@ -474,59 +491,33 @@ Compress an image toward your selected target size.
 <div class="controls">
 
 <div class="field">
-
 <label>Target KB</label>
-
-<input
-id="kb"
-type="number"
-min="1"
-value="50"
->
-
+<input id="kb" type="number" min="1" value="50">
 </div>
 
 <div class="field">
-
 <label>Format</label>
-
 <select id="fmt">
-
 <option value="image/jpeg">JPEG</option>
 <option value="image/webp">WebP</option>
 <option value="image/png">PNG</option>
-
 </select>
-
 </div>
 
 </div>
 
 <div class="drop" id="idrop">
-
 ⬆️
-
 <h3>Choose an image</h3>
-
 <p>JPG, PNG or WebP</p>
-
-<input
-id="ifile"
-type="file"
-accept="image/*"
->
-
+<input id="ifile" type="file" accept="image/*">
+<div id="iname" class="file-name"></div>
 </div>
 
 <div class="actions">
-
-<button
-class="btn primary"
-onclick="imgCompress()"
->
+<button class="btn primary" onclick="imgCompress()">
 Compress & Download
 </button>
-
 </div>
 
 <div id="istat"></div>
@@ -547,85 +538,43 @@ Resize an image to exact dimensions.
 <div class="controls">
 
 <div class="field">
-
 <label>Width</label>
-
-<input
-id="rw"
-type="number"
-min="1"
-value="800"
->
-
+<input id="rw" type="number" min="1" value="800">
 </div>
 
 <div class="field">
-
 <label>Height</label>
-
-<input
-id="rh"
-type="number"
-min="1"
-value="600"
->
-
+<input id="rh" type="number" min="1" value="600">
 </div>
 
 <div class="field">
-
 <label>Format</label>
-
 <select id="rf">
-
 <option value="image/jpeg">JPEG</option>
 <option value="image/png">PNG</option>
 <option value="image/webp">WebP</option>
-
 </select>
-
 </div>
 
 <div class="field">
-
 <label>Quality</label>
-
-<input
-id="rq"
-type="number"
-min=".05"
-max=".98"
-step=".01"
-value=".85"
->
-
+<input id="rq" type="number" min=".05" max=".98" step=".01" value=".85">
 </div>
 
 </div>
 
 <div class="drop" id="rdrop">
-
 📐
-
 <h3>Choose an image</h3>
-
-<input
-id="rfile"
-type="file"
-accept="image/*"
->
-
+<p>Click here to select your file</p>
+<input id="rfile" type="file" accept="image/*">
+<div id="rname" class="file-name"></div>
 </div>
 
 <div class="actions">
-
-<button
-class="btn primary"
-onclick="resizeImage()"
->
+<button class="btn primary" onclick="resizeImage()">
 Resize & Download
 </button>
-
 </div>
 
 <div id="rstat"></div>
@@ -644,42 +593,26 @@ Convert between JPG, PNG and WebP.
 </p>
 
 <div class="field">
-
 <label>Output format</label>
-
 <select id="cf">
-
 <option value="image/jpeg">JPG</option>
 <option value="image/png">PNG</option>
 <option value="image/webp">WebP</option>
-
 </select>
-
 </div>
 
 <div class="drop" id="cdrop">
-
 🔄
-
 <h3>Choose an image</h3>
-
-<input
-id="cfile"
-type="file"
-accept="image/*"
->
-
+<p>Click here to select your file</p>
+<input id="cfile" type="file" accept="image/*">
+<div id="cname" class="file-name"></div>
 </div>
 
 <div class="actions">
-
-<button
-class="btn primary"
-onclick="convertImage()"
->
+<button class="btn primary" onclick="convertImage()">
 Convert & Download
 </button>
-
 </div>
 
 <div id="cstat"></div>
@@ -700,56 +633,29 @@ Create a clean signature PNG at exact dimensions.
 <div class="controls">
 
 <div class="field">
-
 <label>Width</label>
-
-<input
-id="sw"
-type="number"
-min="1"
-value="300"
->
-
+<input id="sw" type="number" min="1" value="300">
 </div>
 
 <div class="field">
-
 <label>Height</label>
-
-<input
-id="sh"
-type="number"
-min="1"
-value="100"
->
-
+<input id="sh" type="number" min="1" value="100">
 </div>
 
 </div>
 
 <div class="drop" id="sdrop">
-
 ✍️
-
 <h3>Choose signature</h3>
-
-<input
-id="sfile"
-type="file"
-accept="image/*"
->
-
+<p>Click here to select your file</p>
+<input id="sfile" type="file" accept="image/*">
+<div id="sname" class="file-name"></div>
 </div>
 
 <div class="actions">
-
-<button
-class="btn primary"
-onclick="signatureResize()"
->
+<button class="btn primary" onclick="signatureResize()">
 Create & Download
 </button>
-
 </div>
 
 <div id="sstat"></div>
@@ -757,7 +663,7 @@ Create & Download
 </div>
 
 
-<!-- JPG TO PDF -->
+<!-- JPG PDF -->
 
 <div id="jpgpdf" class="pane hidden">
 
@@ -768,31 +674,17 @@ Combine multiple images into a single PDF.
 </p>
 
 <div class="drop" id="jdrop">
-
 📄
-
 <h3>Choose images</h3>
-
-<p>JPG, PNG or WebP</p>
-
-<input
-id="jfile"
-type="file"
-accept="image/jpeg,image/png,image/webp"
-multiple
->
-
+<p>JPG, PNG or WebP — multiple files supported</p>
+<input id="jfile" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+<div id="jname" class="file-name"></div>
 </div>
 
 <div class="actions">
-
-<button
-class="btn primary"
-onclick="jpgToPdf()"
->
+<button class="btn primary" onclick="jpgToPdf()">
 Create PDF
 </button>
-
 </div>
 
 <div id="jstat"></div>
@@ -813,61 +705,38 @@ Rebuild PDF pages as optimized JPEGs. Best for scanned and photo-heavy PDFs.
 <div class="controls">
 
 <div class="field">
-
 <label>Compression</label>
-
 <select id="pdfLevel">
-
 <option value="balanced">Balanced</option>
 <option value="strong">Strong</option>
 <option value="maximum">Maximum</option>
-
 </select>
-
 </div>
 
 <div class="field">
-
 <label>JPEG Quality</label>
-
 <select id="pdfQuality">
-
 <option value=".78">78%</option>
 <option value=".65">65%</option>
 <option value=".52">52%</option>
 <option value=".42">42%</option>
-
 </select>
-
 </div>
 
 </div>
 
 <div class="drop" id="pdrop">
-
 🗜️
-
 <h3>Choose a PDF</h3>
-
-<p>PDF files only</p>
-
-<input
-id="pfile"
-type="file"
-accept="application/pdf"
->
-
+<p>Click here to select your PDF</p>
+<input id="pfile" type="file" accept="application/pdf">
+<div id="pname" class="file-name"></div>
 </div>
 
 <div class="actions">
-
-<button
-class="btn primary"
-onclick="compressPdf()"
->
+<button class="btn primary" onclick="compressPdf()">
 Compress PDF
 </button>
-
 </div>
 
 <div id="pstat"></div>
@@ -886,31 +755,17 @@ Combine multiple PDFs in the selected order.
 </p>
 
 <div class="drop" id="mdrop">
-
 ➕
-
 <h3>Choose PDFs</h3>
-
 <p>Select two or more files</p>
-
-<input
-id="mfile"
-type="file"
-accept="application/pdf"
-multiple
->
-
+<input id="mfile" type="file" accept="application/pdf" multiple>
+<div id="mname" class="file-name"></div>
 </div>
 
 <div class="actions">
-
-<button
-class="btn primary"
-onclick="mergePdfs()"
->
+<button class="btn primary" onclick="mergePdfs()">
 Merge PDFs
 </button>
-
 </div>
 
 <div id="mstat"></div>
@@ -929,80 +784,45 @@ Extract pages such as 1-3, 5, 8-10.
 </p>
 
 <div class="field">
-
 <label>Page ranges</label>
-
-<input
-id="ranges"
-placeholder="1-3, 5, 8-10"
->
-
+<input id="ranges" placeholder="1-3, 5, 8-10">
 </div>
 
 <div class="drop" id="xdrop">
-
 ✂️
-
 <h3>Choose a PDF</h3>
-
-<input
-id="xfile"
-type="file"
-accept="application/pdf"
->
-
+<p>Click here to select your PDF</p>
+<input id="xfile" type="file" accept="application/pdf">
+<div id="xname" class="file-name"></div>
 </div>
 
 <div class="actions">
-
-<button
-class="btn primary"
-onclick="splitPdf()"
->
+<button class="btn primary" onclick="splitPdf()">
 Split PDF
 </button>
-
 </div>
 
 <div id="xstat"></div>
 
 </div>
 
-
 </div>
-
 </div>
-
 
 <footer class="foot">
-
 MakeMyFile © 2026 · Files are processed locally in your browser.
-
 </footer>
 
 
 <script>
 
 /* ==========================================
-   PDF.JS SETUP
-========================================== */
-
-if(window.pdfjsLib){
-
-pdfjsLib.GlobalWorkerOptions.workerSrc =
-"https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.js";
-
-}
-
-
-/* ==========================================
-   HELPERS
+   BASIC HELPERS
 ========================================== */
 
 function $(id){
 return document.getElementById(id);
 }
-
 
 function formatSize(bytes){
 
@@ -1013,9 +833,7 @@ if(bytes < 1048576)
 return (bytes/1024).toFixed(1)+" KB";
 
 return (bytes/1048576).toFixed(2)+" MB";
-
 }
-
 
 function extension(type){
 
@@ -1029,17 +847,13 @@ if(type==="image/webp")
 return "webp";
 
 return "bin";
-
 }
-
 
 function showStatus(id,message,type=""){
 
 $(id).innerHTML =
 '<div class="status '+type+'">'+message+'</div>';
-
 }
-
 
 function progressStatus(id,message,percent){
 
@@ -1050,38 +864,34 @@ message+
 '<div style="width:'+percent+'%"></div>'+
 '</div>'+
 '</div>';
-
 }
-
 
 function downloadBlob(blob,filename){
 
-const url =
-URL.createObjectURL(blob);
+const url=URL.createObjectURL(blob);
 
-const a =
-document.createElement("a");
+const a=document.createElement("a");
 
 a.href=url;
 a.download=filename;
 
 document.body.appendChild(a);
-
 a.click();
-
 a.remove();
 
-setTimeout(()=>{
+setTimeout(function(){
 URL.revokeObjectURL(url);
 },3000);
-
 }
 
 
+/* ==========================================
+   TOOL NAVIGATION
+========================================== */
+
 function openTool(id,kb){
 
-document.querySelectorAll(".pane")
-.forEach(p=>{
+document.querySelectorAll(".pane").forEach(function(p){
 p.classList.add("hidden");
 });
 
@@ -1092,14 +902,105 @@ return;
 
 pane.classList.remove("hidden");
 
-if(kb)
+if(kb){
 $("kb").value=kb;
+}
+
+const card=document.querySelector(".card");
+
+if(card){
 
 window.scrollTo({
-top:document.querySelector(".card").offsetTop-20,
+top:card.offsetTop-20,
 behavior:"smooth"
 });
 
+}
+}
+
+
+/* ==========================================
+   FILE PICKER SYSTEM
+========================================== */
+
+function setupDrop(dropId,inputId,nameId){
+
+const drop=$(dropId);
+const input=$(inputId);
+const name=$(nameId);
+
+if(!drop || !input)
+return;
+
+drop.addEventListener("click",function(e){
+
+if(e.target!==input){
+input.click();
+}
+
+});
+
+input.addEventListener("change",function(){
+
+if(input.files.length===1){
+
+name.textContent="Selected: "+input.files[0].name;
+
+}else if(input.files.length>1){
+
+name.textContent=
+input.files.length+
+" files selected";
+
+}else{
+
+name.textContent="";
+}
+
+});
+
+drop.addEventListener("dragover",function(e){
+
+e.preventDefault();
+drop.classList.add("drag");
+
+});
+
+drop.addEventListener("dragleave",function(){
+
+drop.classList.remove("drag");
+
+});
+
+drop.addEventListener("drop",function(e){
+
+e.preventDefault();
+
+drop.classList.remove("drag");
+
+if(e.dataTransfer.files.length){
+
+try{
+
+const dt=new DataTransfer();
+
+for(const file of e.dataTransfer.files){
+dt.items.add(file);
+}
+
+input.files=dt.files;
+
+input.dispatchEvent(new Event("change"));
+
+}catch(error){
+
+console.log(error);
+
+}
+
+}
+
+});
 }
 
 
@@ -1109,15 +1010,13 @@ behavior:"smooth"
 
 function loadImage(file){
 
-return new Promise((resolve,reject)=>{
+return new Promise(function(resolve,reject){
 
-const url =
-URL.createObjectURL(file);
+const url=URL.createObjectURL(file);
 
-const image =
-new Image();
+const image=new Image();
 
-image.onload=()=>{
+image.onload=function(){
 
 URL.revokeObjectURL(url);
 
@@ -1125,7 +1024,7 @@ resolve(image);
 
 };
 
-image.onerror=()=>{
+image.onerror=function(){
 
 URL.revokeObjectURL(url);
 
@@ -1138,7 +1037,6 @@ new Error("Could not decode this image.")
 image.src=url;
 
 });
-
 }
 
 
@@ -1154,16 +1052,14 @@ type,
 quality=.85
 ){
 
-return new Promise((resolve,reject)=>{
+return new Promise(function(resolve,reject){
 
-const canvas=
-document.createElement("canvas");
+const canvas=document.createElement("canvas");
 
 canvas.width=width;
 canvas.height=height;
 
-const ctx=
-canvas.getContext("2d");
+const ctx=canvas.getContext("2d");
 
 if(!ctx){
 
@@ -1172,7 +1068,6 @@ new Error("Canvas is not supported.")
 );
 
 return;
-
 }
 
 if(type==="image/jpeg"){
@@ -1197,14 +1092,19 @@ height
 );
 
 canvas.toBlob(
-blob=>{
+function(blob){
 
-if(blob)
+if(blob){
+
 resolve(blob);
-else
+
+}else{
+
 reject(
 new Error("Image encoding failed.")
 );
+
+}
 
 },
 type,
@@ -1212,7 +1112,6 @@ quality
 );
 
 });
-
 }
 
 
@@ -1222,11 +1121,9 @@ quality
 
 async function imgCompress(){
 
-const file =
-$("ifile").files[0];
+const file=$("ifile").files[0];
 
-const targetKb =
-Number($("kb").value);
+const targetKb=Number($("kb").value);
 
 if(!file){
 
@@ -1237,7 +1134,6 @@ showStatus(
 );
 
 return;
-
 }
 
 if(!targetKb || targetKb<1){
@@ -1249,19 +1145,15 @@ showStatus(
 );
 
 return;
-
 }
 
 try{
 
-const image=
-await loadImage(file);
+const image=await loadImage(file);
 
-const target=
-targetKb*1024;
+const target=targetKb*1024;
 
-const type=
-$("fmt").value;
+const type=$("fmt").value;
 
 let best=null;
 
@@ -1288,17 +1180,14 @@ const scales=[
 
 for(let s=0;s<scales.length;s++){
 
-const scale=
-scales[s];
+const scale=scales[s];
 
-const width=
-Math.max(
+const width=Math.max(
 1,
 Math.round(image.naturalWidth*scale)
 );
 
-const height=
-Math.max(
+const height=Math.max(
 1,
 Math.round(image.naturalHeight*scale)
 );
@@ -1308,11 +1197,9 @@ let high=.98;
 
 for(let i=0;i<9;i++){
 
-const quality=
-(low+high)/2;
+const quality=(low+high)/2;
 
-const blob=
-await canvasBlob(
+const blob=await canvasBlob(
 image,
 width,
 height,
@@ -1323,10 +1210,10 @@ quality
 if(blob.size<=target){
 
 best={
-blob,
-width,
-height,
-quality
+blob:blob,
+width:width,
+height:height,
+quality:quality
 };
 
 low=quality;
@@ -1359,25 +1246,19 @@ best.blob,
 );
 
 return;
-
 }
 
 progressStatus(
 "istat",
 "Optimizing…",
-Math.round((s+1)/scales.length*100)
+Math.round(
+((s+1)/scales.length)*100
+)
 );
 
 }
 
-showStatus(
-"istat",
-"Target is extremely small. The closest practical result is being downloaded.",
-"warn"
-);
-
-const fallback=
-await canvasBlob(
+const fallback=await canvasBlob(
 image,
 Math.max(
 1,
@@ -1389,6 +1270,13 @@ Math.round(image.naturalHeight*.15)
 ),
 type,
 .05
+);
+
+showStatus(
+"istat",
+"Could not reach the exact target. Closest result: "+
+formatSize(fallback.size),
+"warn"
 );
 
 downloadBlob(
@@ -1405,7 +1293,6 @@ error.message,
 );
 
 }
-
 }
 
 
@@ -1415,8 +1302,7 @@ error.message,
 
 async function resizeImage(){
 
-const file=
-$("rfile").files[0];
+const file=$("rfile").files[0];
 
 if(!file){
 
@@ -1427,31 +1313,28 @@ showStatus(
 );
 
 return;
-
 }
 
 try{
 
-const image=
-await loadImage(file);
+const image=await loadImage(file);
 
-const width=
-Number($("rw").value);
+const width=Number($("rw").value);
+const height=Number($("rh").value);
 
-const height=
-Number($("rh").value);
+if(width<1 || height<1){
 
-if(width<1||height<1)
-throw new Error("Enter valid dimensions.");
+throw new Error(
+"Enter valid dimensions."
+);
 
-const type=
-$("rf").value;
+}
 
-const quality=
-Number($("rq").value);
+const type=$("rf").value;
 
-const blob=
-await canvasBlob(
+const quality=Number($("rq").value);
+
+const blob=await canvasBlob(
 image,
 width,
 height,
@@ -1484,7 +1367,6 @@ error.message,
 );
 
 }
-
 }
 
 
@@ -1494,8 +1376,7 @@ error.message,
 
 async function convertImage(){
 
-const file=
-$("cfile").files[0];
+const file=$("cfile").files[0];
 
 if(!file){
 
@@ -1506,165 +1387,10 @@ showStatus(
 );
 
 return;
-
 }
 
 try{
 
-const image=
-await loadImage(file);
+const image=await loadImage(file);
 
-const type=
-$("cf").value;
-
-const blob=
-await canvasBlob(
-image,
-image.naturalWidth,
-image.naturalHeight,
-type,
-.9
-);
-
-showStatus(
-"cstat",
-"Converted · "+
-formatSize(blob.size),
-"good"
-);
-
-downloadBlob(
-blob,
-"converted."+extension(type)
-);
-
-}catch(error){
-
-showStatus(
-"cstat",
-error.message,
-"err"
-);
-
-}
-
-}
-
-
-/* ==========================================
-   SIGNATURE
-========================================== */
-
-async function signatureResize(){
-
-const file=
-$("sfile").files[0];
-
-if(!file){
-
-showStatus(
-"sstat",
-"Choose a signature first.",
-"err"
-);
-
-return;
-
-}
-
-try{
-
-const image=
-await loadImage(file);
-
-const width=
-Number($("sw").value);
-
-const height=
-Number($("sh").value);
-
-if(width<1||height<1)
-throw new Error("Enter valid dimensions.");
-
-const blob=
-await canvasBlob(
-image,
-width,
-height,
-"image/png"
-);
-
-showStatus(
-"sstat",
-"Signature ready · "+
-formatSize(blob.size),
-"good"
-);
-
-downloadBlob(
-blob,
-"signature.png"
-);
-
-}catch(error){
-
-showStatus(
-"sstat",
-error.message,
-"err"
-);
-
-}
-
-}
-
-
-/* ==========================================
-   JPG TO PDF
-========================================== */
-
-async function jpgToPdf(){
-
-const files=
-[...$("jfile").files];
-
-if(!files.length){
-
-showStatus(
-"jstat",
-"Choose at least one image.",
-"err"
-);
-
-return;
-
-}
-
-if(typeof PDFLib==="undefined"){
-
-showStatus(
-"jstat",
-"PDF library failed to load. Refresh the page.",
-"err"
-);
-
-return;
-
-}
-
-try{
-
-const pdf=
-await PDFLib.PDFDocument.create();
-
-for(let i=0;i<files.length;i++){
-
-const file=files[i];
-
-progressStatus(
-"jstat",
-"Processing image "+
-(i+1)+
-" of "+
-files.length+"…",
-Math.round(i/files.le
+const type=$("cf").va
