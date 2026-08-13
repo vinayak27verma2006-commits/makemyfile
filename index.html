@@ -1,13 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNDQKKEFVH"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-XNDQKKEFVH');
+</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>MakeMyFile — Free Image & PDF Tools Online</title>
 
-<meta name="description" content="Free online image and PDF tools. Compress photos to exact KB sizes, resize and convert images, create PDFs, merge and split PDFs privately in your browser.">
-<meta name="keywords" content="image compressor, compress image to 20KB, compress image to 50KB, compress image to 100KB, compress image to 200KB, image resizer, image converter, JPG to PDF, PDF compressor, merge PDF, split PDF">
+<meta name="description" content="Free online image and PDF tools. Compress photos to 20KB, 50KB, 100KB or 200KB, resize and convert images, create PDFs, merge PDFs and split PDFs privately in your browser.">
+
+<meta name="keywords" content="image compressor, photo compressor, compress image to 20KB, compress image to 50KB, compress image to 100KB, compress image to 200KB, image resizer, image converter, JPG to PDF, PDF compressor, merge PDF, split PDF">
+
 <meta name="robots" content="index,follow">
 
 <link rel="canonical" href="https://vinayak27verma2006-commits.github.io/makemyfile/">
@@ -20,327 +32,273 @@
 
 <style>
 :root{
-  --bg:#080b14;
-  --card:#111827;
-  --card2:#0d1422;
-  --line:#33415d;
-  --text:#f7f9ff;
-  --muted:#aeb8cc;
-  --p:#7567ff;
-  --c:#23d4e5;
-  --ok:#35d58a;
+--bg:#080b14;
+--card:#111827;
+--card2:#0d1422;
+--line:#33415d;
+--text:#f7f9ff;
+--muted:#aeb8cc;
+--p:#7567ff;
+--c:#23d4e5;
+--ok:#35d58a
 }
 
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
+*{box-sizing:border-box}
 
 body{
-  margin:0;
-  background:
-    radial-gradient(circle at 50% -10%,#29356b,transparent 55%),
-    var(--bg);
-  color:var(--text);
-  font:15px/1.5 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+margin:0;
+background:
+radial-gradient(circle at 50% -10%,#29356b,transparent 55%),
+var(--bg);
+color:var(--text);
+font:15px/1.5 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
 }
 
-button,input,select{
-  font:inherit;
-}
+button,input,select{font:inherit}
 
-button{
-  cursor:pointer;
-}
+button{cursor:pointer}
 
 header{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:#080b14ee;
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid #ffffff12;
+position:sticky;
+top:0;
+z-index:10;
+background:#080b14ee;
+backdrop-filter:blur(16px);
+border-bottom:1px solid #ffffff12
 }
 
 .bar{
-  max-width:1100px;
-  margin:auto;
-  padding:14px 18px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+max-width:1100px;
+margin:auto;
+padding:14px 18px;
+display:flex;
+justify-content:space-between;
+align-items:center
 }
 
 .logo{
-  font-size:21px;
-  font-weight:900;
+font-size:21px;
+font-weight:900
 }
 
-.logo span{
-  color:var(--c);
-}
+.logo span{color:var(--c)}
 
 .hero{
-  text-align:center;
-  padding:70px 18px 35px;
-}
-
-.badge{
-  display:inline-block;
-  padding:7px 12px;
-  border:1px solid #485486;
-  border-radius:99px;
-  color:#bfc7ff;
-  background:#111a31;
-  font-weight:800;
-  font-size:12px;
+text-align:center;
+padding:70px 18px 35px
 }
 
 .hero h1{
-  font-size:clamp(42px,8vw,72px);
-  line-height:1;
-  letter-spacing:-.06em;
-  margin:15px auto;
-  max-width:850px;
+font-size:clamp(42px,8vw,72px);
+line-height:1;
+letter-spacing:-.06em;
+margin:15px auto;
+max-width:850px
 }
 
 .grad{
-  background:linear-gradient(90deg,#fff,#9c91ff,#58e6ee);
-  color:transparent;
-  background-clip:text;
-  -webkit-background-clip:text;
+background:linear-gradient(90deg,#fff,#9c91ff,#58e6ee);
+color:transparent;
+background-clip:text;
+-webkit-background-clip:text
 }
 
 .hero p{
-  color:var(--muted);
-  font-size:18px;
-  max-width:700px;
-  margin:0 auto;
+color:var(--muted);
+font-size:18px;
+max-width:700px;
+margin:auto
+}
+
+.badge{
+display:inline-block;
+padding:7px 12px;
+border:1px solid #485486;
+border-radius:99px;
+color:#bfc7ff;
+background:#111a31;
+font-weight:800;
+font-size:12px
 }
 
 .wrap{
-  max-width:1100px;
-  margin:auto;
-  padding:14px 18px;
+max-width:1100px;
+margin:auto;
+padding:14px 18px
 }
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  padding-bottom:35px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px;
+padding-bottom:35px
 }
 
 .tool{
-  border:1px solid var(--line);
-  background:var(--card);
-  color:var(--text);
-  border-radius:13px;
-  padding:13px;
-  font-weight:800;
-  text-align:left;
-  min-height:86px;
-  transition:.2s;
+border:1px solid var(--line);
+background:var(--card);
+color:var(--text);
+border-radius:13px;
+padding:13px;
+font-weight:800;
+text-align:left;
+min-height:86px;
+transition:.2s
 }
 
 .tool:hover{
-  transform:translateY(-3px);
-  border-color:#776cff;
+transform:translateY(-3px);
+border-color:#776cff
 }
 
 .tool small{
-  display:block;
-  color:var(--muted);
-  font-weight:500;
-  margin-top:4px;
+display:block;
+color:var(--muted);
+font-weight:500;
+margin-top:4px
 }
 
 .card{
-  background:linear-gradient(180deg,#141d30,#0d1422);
-  border:1px solid var(--line);
-  border-radius:22px;
-  padding:22px;
-  box-shadow:0 25px 70px #0005;
+background:linear-gradient(180deg,#141d30,#0d1422);
+border:1px solid var(--line);
+border-radius:22px;
+padding:22px;
+box-shadow:0 25px 70px #0005;
+min-height:400px
 }
 
-.pane h2{
-  margin:0 0 4px;
-}
+.pane h2{margin-bottom:4px}
 
-.pane>p{
-  color:var(--muted);
-}
-
-.hidden{
-  display:none !important;
-}
+.pane>p{color:var(--muted)}
 
 .controls{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:13px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:13px
 }
 
 .field label{
-  display:block;
-  color:#cbd3e4;
-  font-size:12px;
-  font-weight:800;
-  margin-bottom:6px;
+display:block;
+color:#cbd3e4;
+font-size:12px;
+font-weight:800;
+margin-bottom:6px
 }
 
 .field input,
 .field select{
-  width:100%;
-  padding:12px;
-  border-radius:11px;
-  border:1px solid #465572;
-  background:#080d18;
-  color:#fff;
-  outline:0;
+width:100%;
+padding:12px;
+border-radius:11px;
+border:1px solid #465572;
+background:#080d18;
+color:#fff;
+outline:0
 }
 
 .field input:focus,
 .field select:focus{
-  border-color:#8d82ff;
-  box-shadow:0 0 0 3px #7567ff22;
+border-color:#8d82ff;
+box-shadow:0 0 0 3px #7567ff22
 }
 
 option{
-  background:#101827;
-  color:#fff;
+background:#101827;
+color:#fff
 }
 
 .drop{
-  margin-top:16px;
-  border:2px dashed #465572;
-  border-radius:17px;
-  text-align:center;
-  padding:32px 15px;
-  background:#0d1525;
-  transition:.2s;
-  user-select:none;
+margin-top:16px;
+border:2px dashed #465572;
+border-radius:17px;
+text-align:center;
+padding:32px 15px;
+background:#0d1525;
+transition:.2s;
+user-select:none
 }
 
 .drop:hover,
 .drop.drag{
-  border-color:var(--c);
-  background:#0e2230;
+border-color:var(--c);
+background:#0e2230
 }
 
-.drop h3{
-  margin:7px 0;
-}
+.drop h3{margin:7px 0}
 
 .drop p{
-  margin:0;
-  color:var(--muted);
+margin:0;
+color:var(--muted)
 }
 
-.drop input{
-  display:none;
-}
+.drop input{display:none}
 
 .actions{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:16px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:16px
 }
 
 .btn{
-  border:1px solid var(--line);
-  background:var(--card);
-  color:var(--text);
-  border-radius:13px;
-  padding:13px;
-  font-weight:800;
+border:1px solid var(--line);
+background:var(--card);
+color:var(--text);
+border-radius:13px;
+padding:13px;
+font-weight:800
 }
 
 .primary{
-  border:0;
-  background:linear-gradient(100deg,#6656ed,#16b8c9);
-  box-shadow:0 10px 28px #6556ed33;
-}
-
-.primary:hover{
-  filter:brightness(1.08);
+border:0;
+background:linear-gradient(100deg,#6656ed,#16b8c9);
+box-shadow:0 10px 28px #6556ed33
 }
 
 .status{
-  margin-top:16px;
-  padding:13px;
-  border-radius:11px;
-  background:#0a111e;
-  border:1px solid var(--line);
-  color:#d5dcec;
+margin-top:16px;
+padding:13px;
+border-radius:11px;
+background:#0a111e;
+border:1px solid var(--line);
+color:#d5dcec
 }
 
 .good{
-  border-color:#286d50;
-  color:#8df0ba;
+border-color:#286d50;
+color:#8df0ba
 }
 
 .warn{
-  border-color:#73572b;
-  color:#ffd68e;
+border-color:#73572b;
+color:#ffd68e
 }
 
 .err{
-  border-color:#71323d;
-  color:#ffadb7;
+border-color:#71323d;
+color:#ffadb7
 }
 
+.hidden{display:none}
+
 .foot{
-  max-width:1100px;
-  margin:70px auto 0;
-  border-top:1px solid var(--line);
-  color:var(--muted);
-  padding:30px 18px;
-  text-align:center;
+margin-top:70px;
+border-top:1px solid var(--line);
+color:var(--muted);
+padding:30px 18px;
+text-align:center
 }
 
 @media(max-width:760px){
-
-  .grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .controls{
-    grid-template-columns:1fr;
-  }
-
-  .hero{
-    padding-top:50px;
-  }
-
-  .card{
-    padding:16px;
-  }
-
-  .tool{
-    font-size:13px;
-  }
+.grid{grid-template-columns:repeat(2,1fr)}
+.controls{grid-template-columns:1fr}
+.hero{padding-top:50px}
+.card{padding:16px}
+.tool{font-size:13px}
 }
 
 @media(max-width:430px){
-
-  .grid{
-    grid-template-columns:1fr 1fr;
-    gap:8px;
-  }
-
-  .tool{
-    min-height:80px;
-    padding:10px;
-  }
-
-  .hero h1{
-    font-size:43px;
-  }
+.grid{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
@@ -348,853 +306,1028 @@ option{
 <body>
 
 <header>
-  <div class="bar">
-    <div class="logo">MakeMy<span>File</span></div>
-  </div>
+<div class="bar">
+<div class="logo">MakeMy<span>File</span></div>
+</div>
 </header>
 
 <section class="hero">
+<span class="badge">PRIVATE • FAST • IN-BROWSER</span>
 
-  <span class="badge">PRIVATE • FAST • IN-BROWSER</span>
+<h1>
+Make your files
+<span class="grad">fit. Instantly.</span>
+</h1>
 
-  <h1>
-    Make your files
-    <span class="grad">fit. Instantly.</span>
-  </h1>
-
-  <p>
-    Compress, resize, convert and manage images and PDFs
-    without uploading your files.
-  </p>
-
+<p>
+Compress, resize, convert and manage images and PDFs without uploading your files.
+</p>
 </section>
 
 <div class="wrap">
 
-  <div class="grid">
-
-    <button class="tool tool-btn" data-tool="image" data-kb="20">
-      ⚡ Photo to 20 KB
-      <small>Compress to target size</small>
-    </button>
-
-    <button class="tool tool-btn" data-tool="image" data-kb="50">
-      ⚡ Photo to 50 KB
-      <small>Compress to target size</small>
-    </button>
-
-    <button class="tool tool-btn" data-tool="image" data-kb="100">
-      ⚡ Photo to 100 KB
-      <small>Compress to target size</small>
-    </button>
-
-    <button class="tool tool-btn" data-tool="image" data-kb="200">
-      ⚡ Photo to 200 KB
-      <small>Compress to target size</small>
-    </button>
-
-    <button class="tool tool-btn" data-tool="image">
-      🖼️ Image Compressor
-      <small>Target file size</small>
-    </button>
-
-    <button class="tool tool-btn" data-tool="resize">
-      📐 Image Resizer
-      <small>Exact dimensions</small>
-    </button>
-
-    <button class="tool tool-btn" data-tool="convert">
-      🔄 Image Converter
-      <small>JPG / PNG / WebP</small>
-    </button>
-
-    <button class="tool tool-btn" data-tool="signature">
-      ✍️ Signature Resizer
-      <small>Clean PNG export</small>
-    </button>
-
-    <button class="tool tool-btn" data-tool="jpgpdf">
-      📄 JPG to PDF
-      <small>Multiple images</small>
-    </button>
-
-    <button class="tool tool-btn" data-tool="pdf">
-      🗜️ PDF Compressor
-      <small>Reduce PDF size</small>
-    </button>
-
-    <button class="tool tool-btn" data-tool="merge">
-      ➕ Merge PDFs
-      <small>Combine PDF files</small>
-    </button>
-
-    <button class="tool tool-btn" data-tool="split">
-      ✂️ Split PDF
-      <small>Extract selected pages</small>
-    </button>
-
-  </div>
-
-  <div class="card">
-
-    <!-- IMAGE COMPRESSOR -->
-
-    <div id="image" class="pane">
-
-      <h2>Image Compressor</h2>
-
-      <p>
-        Compress an image toward your selected target size.
-        Processing happens locally in your browser.
-      </p>
-
-      <div class="controls">
-
-        <div class="field">
-          <label>Target KB</label>
-          <input id="kb" type="number" min="1" value="50">
-        </div>
-
-        <div class="field">
-          <label>Format</label>
-
-          <select id="fmt">
-            <option value="image/jpeg">JPEG</option>
-            <option value="image/webp">WebP</option>
-            <option value="image/png">PNG</option>
-          </select>
-        </div>
-
-      </div>
-
-      <div class="drop" id="idrop">
-
-        ⬆️
-
-        <h3>Choose an image</h3>
-
-        <p>JPG, PNG or WebP</p>
-
-        <input id="ifile" type="file" accept="image/*">
-
-      </div>
-
-      <div class="actions">
-
-        <button id="compressBtn" class="btn primary">
-          Compress & download
-        </button>
-
-      </div>
-
-      <div id="istat"></div>
-
-    </div>
-
-
-    <!-- RESIZER -->
-
-    <div id="resize" class="pane hidden">
-
-      <h2>Image Resizer</h2>
-
-      <p>
-        Resize your image to exact dimensions.
-      </p>
-
-      <div class="controls">
-
-        <div class="field">
-          <label>Width</label>
-          <input id="rw" type="number" min="1" value="800">
-        </div>
-
-        <div class="field">
-          <label>Height</label>
-          <input id="rh" type="number" min="1" value="600">
-        </div>
-
-        <div class="field">
-          <label>Format</label>
-
-          <select id="rf">
-            <option value="image/jpeg">JPEG</option>
-            <option value="image/png">PNG</option>
-            <option value="image/webp">WebP</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label>Quality</label>
-          <input id="rq" type="number" min=".05" max=".98" step=".01" value=".85">
-        </div>
-
-      </div>
-
-      <div class="drop" id="rdrop">
-
-        📐
-
-        <h3>Choose an image</h3>
-
-        <input id="rfile" type="file" accept="image/*">
-
-      </div>
-
-      <div class="actions">
-
-        <button id="resizeBtn" class="btn primary">
-          Resize & download
-        </button>
-
-      </div>
-
-      <div id="rstat"></div>
-
-    </div>
-
-
-    <!-- CONVERTER -->
-
-    <div id="convert" class="pane hidden">
-
-      <h2>Image Converter</h2>
-
-      <p>
-        Convert images between JPG, PNG and WebP.
-      </p>
-
-      <div class="field">
-
-        <label>Output format</label>
-
-        <select id="cf">
-          <option value="image/jpeg">JPG</option>
-          <option value="image/png">PNG</option>
-          <option value="image/webp">WebP</option>
-        </select>
-
-      </div>
-
-      <div class="drop" id="cdrop">
-
-        🔄
-
-        <h3>Choose an image</h3>
-
-        <input id="cfile" type="file" accept="image/*">
-
-      </div>
-
-      <div class="actions">
-
-        <button id="convertBtn" class="btn primary">
-          Convert & download
-        </button>
-
-      </div>
-
-      <div id="cstat"></div>
-
-    </div>
-
-
-    <!-- SIGNATURE -->
-
-    <div id="signature" class="pane hidden">
-
-      <h2>Signature Resizer</h2>
-
-      <p>
-        Create a clean signature PNG at exact dimensions.
-      </p>
-
-      <div class="controls">
-
-        <div class="field">
-          <label>Width</label>
-          <input id="sw" type="number" min="1" value="300">
-        </div>
-
-        <div class="field">
-          <label>Height</label>
-          <input id="sh" type="number" min="1" value="100">
-        </div>
-
-      </div>
-
-      <div class="drop" id="sdrop">
-
-        ✍️
-
-        <h3>Choose signature</h3>
-
-        <input id="sfile" type="file" accept="image/*">
-
-      </div>
-
-      <div class="actions">
-
-        <button id="signatureBtn" class="btn primary">
-          Create & download
-        </button>
-
-      </div>
-
-      <div id="sstat"></div>
-
-    </div>
-
-
-    <!-- JPG PDF -->
-
-    <div id="jpgpdf" class="pane hidden">
-
-      <h2>JPG to PDF</h2>
-
-      <p>
-        Combine multiple images into one PDF.
-      </p>
-
-      <div class="drop" id="jdrop">
-
-        📄
-
-        <h3>Choose images</h3>
-
-        <input
-          id="jfile"
-          type="file"
-          accept="image/jpeg,image/png,image/webp"
-          multiple
-        >
-
-      </div>
-
-      <div class="actions">
-
-        <button id="jpgpdfBtn" class="btn primary">
-          Create PDF
-        </button>
-
-      </div>
-
-      <div id="jstat"></div>
-
-    </div>
-
-
-    <!-- PDF COMPRESSOR -->
-
-    <div id="pdf" class="pane hidden">
-
-      <h2>PDF Compressor</h2>
-
-      <p>
-        Rebuilds PDF pages as optimized JPEG images.
-        Best for scans and photo-heavy PDFs.
-      </p>
-
-      <div class="controls">
-
-        <div class="field">
-
-          <label>Compression</label>
-
-          <select id="plevel">
-
-            <option value="balanced">
-              Balanced
-            </option>
-
-            <option value="strong">
-              Strong
-            </option>
-
-            <option value="maximum">
-              Maximum
-            </option>
-
-          </select>
-
-        </div>
-
-        <div class="field">
-
-          <label>JPEG quality</label>
-
-          <select id="pq">
-
-            <option value=".78">78%</option>
-            <option value=".65">65%</option>
-            <option value=".52">52%</option>
-
-          </select>
-
-        </div>
-
-      </div>
-
-      <div class="drop" id="pdrop">
-
-        🗜️
-
-        <h3>Choose a PDF</h3>
-
-        <input id="pfile" type="file" accept="application/pdf">
-
-      </div>
-
-      <div class="actions">
-
-        <button id="pdfBtn" class="btn primary">
-          Compress PDF
-        </button>
-
-      </div>
-
-      <div id="pstat"></div>
-
-    </div>
-
-
-    <!-- MERGE -->
-
-    <div id="merge" class="pane hidden">
-
-      <h2>Merge PDFs</h2>
-
-      <p>
-        Combine multiple PDF files into one document.
-      </p>
-
-      <div class="drop" id="mdrop">
-
-        ➕
-
-        <h3>Choose PDFs</h3>
-
-        <input
-          id="mfile"
-          type="file"
-          accept="application/pdf"
-          multiple
-        >
-
-      </div>
-
-      <div class="actions">
-
-        <button id="mergeBtn" class="btn primary">
-          Merge PDFs
-        </button>
-
-      </div>
-
-      <div id="mstat"></div>
-
-    </div>
-
-
-    <!-- SPLIT -->
-
-    <div id="split" class="pane hidden">
-
-      <h2>Split PDF</h2>
-
-      <p>
-        Extract pages such as 1-3, 5, 8-10.
-      </p>
-
-      <div class="field">
-
-        <label>Page ranges</label>
-
-        <input
-          id="ranges"
-          placeholder="1-3, 5"
-        >
-
-      </div>
-
-      <div class="drop" id="xdrop">
-
-        ✂️
-
-        <h3>Choose a PDF</h3>
-
-        <input id="xfile" type="file" accept="application/pdf">
-
-      </div>
-
-      <div class="actions">
-
-        <button id="splitBtn" class="btn primary">
-          Split PDF
-        </button>
-
-      </div>
-
-      <div id="xstat"></div>
-
-    </div>
-
-  </div>
+<div class="grid">
+
+<button class="tool" data-tool="image" data-kb="20">
+⚡ Photo to 20 KB
+<small>Application ready</small>
+</button>
+
+<button class="tool" data-tool="image" data-kb="50">
+⚡ Photo to 50 KB
+<small>Application ready</small>
+</button>
+
+<button class="tool" data-tool="image" data-kb="100">
+⚡ Photo to 100 KB
+<small>Application ready</small>
+</button>
+
+<button class="tool" data-tool="image" data-kb="200">
+⚡ Photo to 200 KB
+<small>Application ready</small>
+</button>
+
+<button class="tool" data-tool="image">
+🖼️ Image Compressor
+<small>Target size</small>
+</button>
+
+<button class="tool" data-tool="resize">
+📐 Image Resizer
+<small>Exact dimensions</small>
+</button>
+
+<button class="tool" data-tool="convert">
+🔄 Image Converter
+<small>JPG / PNG / WebP</small>
+</button>
+
+<button class="tool" data-tool="signature">
+✍️ Signature Resizer
+<small>Clean export</small>
+</button>
+
+<button class="tool" data-tool="jpgpdf">
+📄 JPG to PDF
+<small>Multiple images</small>
+</button>
+
+<button class="tool" data-tool="pdf">
+🗜️ PDF Compressor
+<small>Reduce PDF size</small>
+</button>
+
+<button class="tool" data-tool="merge">
+➕ Merge PDFs
+<small>Combine files</small>
+</button>
+
+<button class="tool" data-tool="split">
+✂️ Split PDF
+<small>Extract pages</small>
+</button>
 
 </div>
 
+<div class="card">
+
+<!-- IMAGE -->
+
+<div id="image" class="pane">
+
+<h2>Image Compressor</h2>
+
+<p>
+Compress an image to your target file size.
+</p>
+
+<div class="controls">
+
+<div class="field">
+<label>Target KB</label>
+<input id="kb" type="number" min="1" value="50">
+</div>
+
+<div class="field">
+<label>Format</label>
+<select id="fmt">
+<option value="image/jpeg">JPEG</option>
+<option value="image/webp">WebP</option>
+<option value="image/png">PNG</option>
+</select>
+</div>
+
+</div>
+
+<div class="drop" id="idrop">
+
+⬆️
+
+<h3>Choose an image</h3>
+
+<p>JPG, PNG or WebP</p>
+
+<input id="ifile" type="file" accept="image/*">
+
+</div>
+
+<div class="actions">
+
+<button id="compressBtn" class="btn primary">
+Compress & download
+</button>
+
+</div>
+
+<div id="istat"></div>
+
+</div>
+
+
+<!-- RESIZE -->
+
+<div id="resize" class="pane hidden">
+
+<h2>Image Resizer</h2>
+
+<p>Resize an image to exact dimensions.</p>
+
+<div class="controls">
+
+<div class="field">
+<label>Width</label>
+<input id="rw" type="number" min="1" value="800">
+</div>
+
+<div class="field">
+<label>Height</label>
+<input id="rh" type="number" min="1" value="600">
+</div>
+
+<div class="field">
+<label>Format</label>
+<select id="rf">
+<option value="image/jpeg">JPEG</option>
+<option value="image/png">PNG</option>
+<option value="image/webp">WebP</option>
+</select>
+</div>
+
+<div class="field">
+<label>Quality</label>
+<input id="rq" type="number" min=".05" max=".98" step=".01" value=".85">
+</div>
+
+</div>
+
+<div class="drop" id="rdrop">
+📐
+<h3>Choose an image</h3>
+<p>JPG, PNG or WebP</p>
+<input id="rfile" type="file" accept="image/*">
+</div>
+
+<div class="actions">
+<button id="resizeBtn" class="btn primary">
+Resize & download
+</button>
+</div>
+
+<div id="rstat"></div>
+
+</div>
+
+
+<!-- CONVERT -->
+
+<div id="convert" class="pane hidden">
+
+<h2>Image Converter</h2>
+
+<p>Convert between JPG, PNG and WebP.</p>
+
+<div class="field">
+
+<label>Output format</label>
+
+<select id="cf">
+<option value="image/jpeg">JPG</option>
+<option value="image/png">PNG</option>
+<option value="image/webp">WebP</option>
+</select>
+
+</div>
+
+<div class="drop" id="cdrop">
+
+🔄
+
+<h3>Choose an image</h3>
+
+<p>JPG, PNG or WebP</p>
+
+<input id="cfile" type="file" accept="image/*">
+
+</div>
+
+<div class="actions">
+
+<button id="convertBtn" class="btn primary">
+Convert & download
+</button>
+
+</div>
+
+<div id="cstat"></div>
+
+</div>
+
+
+<!-- SIGNATURE -->
+
+<div id="signature" class="pane hidden">
+
+<h2>Signature Resizer</h2>
+
+<p>Create a signature image at exact dimensions.</p>
+
+<div class="controls">
+
+<div class="field">
+<label>Width</label>
+<input id="sw" type="number" min="1" value="300">
+</div>
+
+<div class="field">
+<label>Height</label>
+<input id="sh" type="number" min="1" value="100">
+</div>
+
+</div>
+
+<div class="drop" id="sdrop">
+
+✍️
+
+<h3>Choose signature</h3>
+
+<p>PNG, JPG or WebP</p>
+
+<input id="sfile" type="file" accept="image/*">
+
+</div>
+
+<div class="actions">
+
+<button id="signatureBtn" class="btn primary">
+Create & download
+</button>
+
+</div>
+
+<div id="sstat"></div>
+
+</div>
+
+
+<!-- JPG PDF -->
+
+<div id="jpgpdf" class="pane hidden">
+
+<h2>JPG to PDF</h2>
+
+<p>Combine multiple images into one PDF.</p>
+
+<div class="drop" id="jdrop">
+
+📄
+
+<h3>Choose images</h3>
+
+<p>Select one or multiple JPG/PNG files</p>
+
+<input id="jfile" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+
+</div>
+
+<div class="actions">
+
+<button id="jpgpdfBtn" class="btn primary">
+Create PDF
+</button>
+
+</div>
+
+<div id="jstat"></div>
+
+</div>
+
+
+<!-- PDF COMPRESS -->
+
+<div id="pdf" class="pane hidden">
+
+<h2>PDF Compressor</h2>
+
+<p>Rebuild PDF pages as optimized images.</p>
+
+<div class="controls">
+
+<div class="field">
+<label>Quality</label>
+
+<select id="pq">
+<option value=".78">Balanced — 78%</option>
+<option value=".65">Strong — 65%</option>
+<option value=".52">Maximum — 52%</option>
+</select>
+
+</div>
+
+<div class="field">
+<label>Resolution</label>
+
+<select id="pscale">
+<option value="1.15">High</option>
+<option value=".9">Medium</option>
+<option value=".72">Low</option>
+</select>
+
+</div>
+
+</div>
+
+<div class="drop" id="pdrop">
+
+🗜️
+
+<h3>Choose a PDF</h3>
+
+<p>PDF files</p>
+
+<input id="pfile" type="file" accept="application/pdf">
+
+</div>
+
+<div class="actions">
+
+<button id="pdfBtn" class="btn primary">
+Compress PDF
+</button>
+
+</div>
+
+<div id="pstat"></div>
+
+</div>
+
+
+<!-- MERGE -->
+
+<div id="merge" class="pane hidden">
+
+<h2>Merge PDFs</h2>
+
+<p>Combine multiple PDFs into one file.</p>
+
+<div class="drop" id="mdrop">
+
+➕
+
+<h3>Choose PDFs</h3>
+
+<p>Select two or more PDF files</p>
+
+<input id="mfile" type="file" accept="application/pdf" multiple>
+
+</div>
+
+<div class="actions">
+
+<button id="mergeBtn" class="btn primary">
+Merge PDFs
+</button>
+
+</div>
+
+<div id="mstat"></div>
+
+</div>
+
+
+<!-- SPLIT -->
+
+<div id="split" class="pane hidden">
+
+<h2>Split PDF</h2>
+
+<p>Extract selected pages from a PDF.</p>
+
+<div class="field">
+
+<label>Page ranges</label>
+
+<input id="ranges" placeholder="Example: 1-3, 5, 8-10">
+
+</div>
+
+<div class="drop" id="xdrop">
+
+✂️
+
+<h3>Choose a PDF</h3>
+
+<p>PDF files</p>
+
+<input id="xfile" type="file" accept="application/pdf">
+
+</div>
+
+<div class="actions">
+
+<button id="splitBtn" class="btn primary">
+Split PDF
+</button>
+
+</div>
+
+<div id="xstat"></div>
+
+</div>
+
+</div>
+</div>
+
 <footer class="foot">
-
-  MakeMyFile © 2026 · Files are processed locally in your browser.
-
+MakeMyFile © 2026 · Files are processed locally in your browser.
 </footer>
 
 
-<!-- PDF-LIB -->
+<!-- PDF LIBRARY -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
 
+<!-- PDF.JS NORMAL SCRIPT, NOT MODULE -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.js"></script>
 
 <script>
-"use strict";
 
-/* =========================
+/* =========================================================
    BASIC HELPERS
-========================= */
+========================================================= */
 
 const $ = id => document.getElementById(id);
 
-function formatSize(bytes){
+const fmt = n => {
+if(n < 1024) return n + " B";
+if(n < 1048576) return (n/1024).toFixed(1) + " KB";
+return (n/1048576).toFixed(2) + " MB";
+};
 
-  if(bytes < 1024){
-    return bytes + " B";
-  }
-
-  if(bytes < 1024 * 1024){
-    return (bytes / 1024).toFixed(1) + " KB";
-  }
-
-  return (bytes / 1024 / 1024).toFixed(2) + " MB";
+function status(id,msg,type=""){
+const el=$(id);
+if(el){
+el.innerHTML='<div class="status '+type+'">'+msg+'</div>';
+}
 }
 
+function downloadBlob(blob,name){
 
-function showStatus(id,message,type=""){
+const url=URL.createObjectURL(blob);
 
-  const el = $(id);
+const a=document.createElement("a");
 
-  if(!el) return;
+a.href=url;
+a.download=name;
 
-  el.innerHTML =
-    '<div class="status ' +
-    type +
-    '">' +
-    message +
-    '</div>';
+document.body.appendChild(a);
+a.click();
+a.remove();
+
+setTimeout(()=>{
+URL.revokeObjectURL(url);
+},2000);
+
 }
-
-
-function downloadBlob(blob,filename){
-
-  const url = URL.createObjectURL(blob);
-
-  const a = document.createElement("a");
-
-  a.href = url;
-  a.download = filename;
-
-  document.body.appendChild(a);
-
-  a.click();
-
-  a.remove();
-
-  setTimeout(function(){
-    URL.revokeObjectURL(url);
-  },1500);
-}
-
 
 function extension(type){
 
-  if(type === "image/jpeg"){
-    return "jpg";
-  }
+if(type==="image/jpeg") return "jpg";
+if(type==="image/png") return "png";
+if(type==="image/webp") return "webp";
 
-  if(type === "image/png"){
-    return "png";
-  }
-
-  if(type === "image/webp"){
-    return "webp";
-  }
-
-  return "bin";
+return "file";
 }
 
 
-/* =========================
+/* =========================================================
    TOOL NAVIGATION
-========================= */
+========================================================= */
 
-function openTool(id,kb){
+document.querySelectorAll(".tool").forEach(button=>{
 
-  document.querySelectorAll(".pane").forEach(function(pane){
-    pane.classList.add("hidden");
-  });
+button.addEventListener("click",()=>{
 
-  const target = $(id);
+const id=button.dataset.tool;
+const kb=button.dataset.kb;
 
-  if(!target){
-    return;
-  }
+document.querySelectorAll(".pane").forEach(p=>{
+p.classList.add("hidden");
+});
 
-  target.classList.remove("hidden");
+const pane=$(id);
 
-  if(kb){
-    $("kb").value = kb;
-  }
+if(pane){
+pane.classList.remove("hidden");
+}
 
-  const card = document.querySelector(".card");
+if(kb){
+$("kb").value=kb;
+}
 
-  if(card){
+window.scrollTo({
+top:document.querySelector(".card").offsetTop-20,
+behavior:"smooth"
+});
 
-    window.scrollTo({
-      top:card.offsetTop - 20,
-      behavior:"smooth"
-    });
+});
 
-  }
+});
+
+
+/* =========================================================
+   FILE DROP BOXES
+========================================================= */
+
+function setupDrop(dropId,inputId){
+
+const drop=$(dropId);
+const input=$(inputId);
+
+if(!drop || !input) return;
+
+drop.addEventListener("click",e=>{
+
+if(e.target===input) return;
+
+input.click();
+
+});
+
+input.addEventListener("click",e=>{
+e.stopPropagation();
+});
+
+drop.addEventListener("dragover",e=>{
+
+e.preventDefault();
+
+drop.classList.add("drag");
+
+});
+
+drop.addEventListener("dragleave",()=>{
+
+drop.classList.remove("drag");
+
+});
+
+drop.addEventListener("drop",e=>{
+
+e.preventDefault();
+
+drop.classList.remove("drag");
+
+try{
+
+const files=e.dataTransfer.files;
+
+const dt=new DataTransfer();
+
+for(const file of files){
+dt.items.add(file);
+}
+
+input.files=dt.files;
+
+}catch(err){
+
+console.error(err);
 
 }
 
+});
 
-/* =========================
-   IMAGE LOADING
-========================= */
+}
+
+setupDrop("idrop","ifile");
+setupDrop("rdrop","rfile");
+setupDrop("cdrop","cfile");
+setupDrop("sdrop","sfile");
+setupDrop("jdrop","jfile");
+setupDrop("pdrop","pfile");
+setupDrop("mdrop","mfile");
+setupDrop("xdrop","xfile");
+
+
+/* =========================================================
+   IMAGE LOADER
+========================================================= */
 
 function loadImage(file){
 
-  return new Promise(function(resolve,reject){
+return new Promise((resolve,reject)=>{
 
-    if(!file){
-      reject(new Error("No image selected."));
-      return;
-    }
+const url=URL.createObjectURL(file);
 
-    const url = URL.createObjectURL(file);
+const image=new Image();
 
-    const image = new Image();
+image.onload=()=>{
 
-    image.onload = function(){
+URL.revokeObjectURL(url);
 
-      URL.revokeObjectURL(url);
+resolve(image);
 
-      resolve(image);
+};
 
-    };
+image.onerror=()=>{
 
-    image.onerror = function(){
+URL.revokeObjectURL(url);
 
-      URL.revokeObjectURL(url);
+reject(new Error("The image could not be opened."));
 
-      reject(new Error("The image could not be opened."));
+};
 
-    };
+image.src=url;
 
-    image.src = url;
-
-  });
+});
 
 }
 
 
-/* =========================
-   CANVAS ENCODING
-========================= */
+/* =========================================================
+   CANVAS ENCODER
+========================================================= */
 
-function canvasBlob(image,width,height,type,quality){
+function canvasBlob(image,width,height,type,quality=.85){
 
-  return new Promise(function(resolve,reject){
+return new Promise((resolve,reject)=>{
 
-    const canvas = document.createElement("canvas");
+const canvas=document.createElement("canvas");
 
-    canvas.width = Math.max(1,Math.round(width));
-    canvas.height = Math.max(1,Math.round(height));
+canvas.width=Math.max(1,Math.round(width));
+canvas.height=Math.max(1,Math.round(height));
 
-    const ctx = canvas.getContext("2d");
+const ctx=canvas.getContext("2d");
 
-    if(!ctx){
+if(!ctx){
 
-      reject(new Error("Your browser does not support Canvas."));
-      return;
+reject(new Error("Your browser does not support canvas."));
 
-    }
+return;
 
-    if(type === "image/jpeg"){
+}
 
-      ctx.fillStyle = "#ffffff";
+if(type==="image/jpeg"){
 
-      ctx.fillRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-      );
+ctx.fillStyle="#ffffff";
 
-    }
+ctx.fillRect(0,0,canvas.width,canvas.height);
 
-    ctx.drawImage(
-      image,
-      0,
-      0,
-      canvas.width,
-      canvas.height
-    );
+}
 
-    canvas.toBlob(
-      function(blob){
+ctx.drawImage(
+image,
+0,
+0,
+canvas.width,
+canvas.height
+);
 
-        canvas.width = 1;
-        canvas.height = 1;
+canvas.toBlob(blob=>{
 
-        if(!blob){
+if(blob) resolve(blob);
+else reject(new Error("Image encoding failed."));
 
-          reject(new Error("Image encoding failed."));
-          return;
+},type,quality);
 
-        }
-
-        resolve(blob);
-
-      },
-      type,
-      quality
-    );
-
-  });
+});
 
 }
 
 
-/* =========================
+/* =========================================================
    IMAGE COMPRESSOR
-========================= */
+========================================================= */
 
 async function compressImage(){
 
-  const file = $("ifile").files[0];
+const file=$("ifile").files[0];
 
-  const targetKB = Number($("kb").value);
+const targetKB=parseFloat($("kb").value);
 
-  const targetBytes = targetKB * 1024;
+if(!file){
 
-  if(!file){
+status("istat","Choose an image first.","err");
 
-    showStatus(
-      "istat",
-      "Choose an image first.",
-      "err"
-    );
+return;
 
-    return;
-  }
+}
 
-  if(!targetKB || targetKB < 1){
+if(!targetKB || targetKB<=0){
 
-    showStatus(
-      "istat",
-      "Enter a valid target size.",
-      "err"
-    );
+status("istat","Enter a valid target size.","err");
 
-    return;
-  }
+return;
 
-  showStatus(
-    "istat",
-    "Optimizing your image…"
-  );
+}
 
-  try{
+status("istat","Optimizing image…");
 
-    const image = await loadImage(file);
+try{
 
-    const type = $("fmt").value;
+const image=await loadImage(file);
 
-    let best = null;
-    let smallest = null;
+const target=targetKB*1024;
 
-    /*
-      Try progressively smaller dimensions.
-      At every dimension we search for the highest
-      quality that fits under the requested size.
-    */
+const type=$("fmt").value;
 
-    for(
-      let scale = 1;
-      scale >= 0.15;
-      scale -= 0.05
-    ){
+let best=null;
 
-      let low = 0.05;
-      let high = 0.98;
+let smallest=null;
 
-      for(let attempt = 0;attempt < 8;attempt++){
 
-        const quality =
-          (low + high) / 2;
+/* Try multiple dimensions */
 
-        const blob =
-          await canvasBlob(
-            image,
-            image.naturalWidth * scale,
-            image.naturalHeight * scale,
-            type,
-            quality
-          );
+for(let scale=1;scale>=.15;scale-=.05){
 
-        if(
-          !smallest ||
-          blob.size < smallest.blob.size
-        ){
+const width=Math.max(
+1,
+Math.round(image.naturalWidth*scale)
+);
 
-          smallest = {
-            blob:blob,
-            scale:scale,
-            quality:quality
-          };
+const height=Math.max(
+1,
+Math.round(image.naturalHeight*scale)
+);
 
-        }
+let low=.05;
+let high=.98;
 
-        if(blob.size <= targetBytes){
+for(let i=0;i<8;i++){
 
-          if(
-            !best ||
-            scale > best.scale ||
-            (
-              scale === best.scale &&
-              quality > best.quality
-            )
-          ){
+const quality=(low+high)/2;
 
-            best = {
-              blob:blob,
-              scale:scale,
-              quality:quality
-            };
+const blob=await canvasBlob(
+image,
+width,
+height,
+type,
+quality
+);
 
-          }
+if(!smallest || blob.size<smallest.size){
 
-          low = quality;
+smallest={
+blob,
+scale,
+quality
+};
 
-        }else{
+}
 
-          high = quality;
+if(blob.size<=target){
 
-        }
+if(
+!best ||
+scale>best.scale ||
+(scale===best.scale && quality>best.quality)
+){
 
-      }
+best={
+blob,
+scale,
+quality
+};
 
-      if(
-        best &&
-        best.scale >= 0.95 &&
-        bes
+}
+
+low=quality;
+
+}else{
+
+high=quality;
+
+}
+
+}
+
+}
+
+const result=best || smallest;
+
+if(!result){
+
+throw new Error("Unable to create the image.");
+
+}
+
+if(best){
+
+status(
+"istat",
+"Done: "+fmt(result.blob.size)+
+" · "+Math.round(result.scale*100)+
+"% dimensions · "+
+Math.round(result.quality*100)+
+"% quality.",
+"good"
+);
+
+}else{
+
+status(
+"istat",
+"Target was extremely small. Closest result: "+
+fmt(result.blob.size)+".",
+"warn"
+);
+
+}
+
+downloadBlob(
+result.blob,
+"makemyfile."+extension(type)
+);
+
+}catch(error){
+
+console.error(error);
+
+status(
+"istat",
+"Compression failed: "+error.message,
+"err"
+);
+
+}
+
+}
+
+
+/* =========================================================
+   RESIZER
+========================================================= */
+
+async function resizeImage(){
+
+const file=$("rfile").files[0];
+
+if(!file){
+
+status("rstat","Choose an image first.","err");
+
+return;
+
+}
+
+try{
+
+const image=await loadImage(file);
+
+const width=parseInt($("rw").value);
+const height=parseInt($("rh").value);
+
+if(width<1 || height<1){
+
+status("rstat","Enter valid dimensions.","err");
+
+return;
+
+}
+
+const type=$("rf").value;
+const quality=parseFloat($("rq").value);
+
+const blob=await canvasBlob(
+image,
+width,
+height,
+type,
+quality
+);
+
+status(
+"rstat",
+"Created "+width+" × "+height+" px · "+fmt(blob.size),
+"good"
+);
+
+downloadBlob(
+blob,
+"resized."+extension(type)
+);
+
+}catch(error){
+
+status(
+"rstat",
+"Resize failed: "+error.message,
+"err"
+);
+
+}
+
+}
+
+
+/* =========================================================
+   IMAGE CONVERTER
+========================================================= */
+
+async function convertImage(){
+
+const file=$("cfile").files[0];
+
+if(!file){
+
+status("cstat","Choose an image first.","err");
+
+return;
+
+}
+
+try{
+
+const image=await loadImage(file);
+
+const type=$("cf").value;
+
+const blob=await canvasBlob(
+image,
+image.naturalWidth,
+image.naturalHeight,
+type,
+.9
+);
+
+status(
+"cstat",
+"Converted successfully · "+fmt(blob.size),
+"good"
+);
+
+downloadBlob(
+blob,
+"converted."+extension(type)
+);
+
+}catch(error){
+
+status(
+"cstat",
+"Conversion failed: "+error.message,
+"err"
+);
+
+}
+
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+async function resizeSignature(){
+
+const file=$("sfile").files[0];
+
+if(!file){
+
+status("sstat","Choose a signature first.","err");
+
+return;
+
+}
+
+try{
+
+const image=await loadImage(file);
+
+const width=parseInt($("sw").value);
+const height=parseInt($("sh").value);
+
+if(width<1 || height<1){
+
+status("sstat","Enter valid dimensions.","err");
+
+return;
+
+}
+
+const blob=await canvasBlob(
+image,
+width,
+height,
+"image/png
